@@ -1,0 +1,63 @@
+
+In Apache Ni-fi, how can I log all the flowFile 'attributes' in a text file
+Question by Balakrishnan Ramasamy Oct 24, 2016 at 01:26 PM Nifi 
+Hi, I have a requirement, where I am in need to Log all the flowFlile attributes in a separate text file. What I read is that Apache Ni-Fi by design have Provenance which gives a detailed Log information. But, however, since we are new to Ni-Fi, we are not sure about the access levels that to the Production support teams would have, because of which we would like to Log the Attributes in a Text file for which we can give them all access. I also tried using the existing processor "LogAttribute" where I don't see an option to write out into a physical file location. 
+
+ 
+Best Answer 
+Answer by Bryan Bende  · Oct 24, 2016 at 01:45 PM 
+LogAttribute relies on the logback configuration that everything uses in NiFi uses for logging (logback.xml in conf). Right now it goes into nifi-app.log which is the default appender, but you could probably create a new file appender for something like "nifi-logatttribute.log" and then modify this line:
+<logger name="org.apache.nifi.processors.standard.LogAttribute" level="INFO"/>
+To be something like:
+<logger name="org.apache.nifi.processors.standard.LogAttribute" level="INFO">
+ <appender-ref ref="LOGATTRIBUTE_FILE" />
+</logger>
+Assuming you defined a file appender named LOGATTRIBUTE_FILE.
+
+ 3  Hide 3 · Share 
+Mohammed El Moumni  · Mar 09, 2017 at 03:59 PM 0 
+
+Hi @Bryan Bende,
+This answer was very helpful ! Thank you ! 
+I still have a question though : suppose I have the following configuration in logback.xml
+<logger name="org.apache.nifi.processors" level="INFO"/>
+This means that all processors will log to nifi-app.log with INFO Level, right ? In this case, what kind of information will be logged ? What about DEBUG Level ?
+Thanks for your help !
+Bryan Bende   Mohammed El Moumni · Mar 09, 2017 at 04:23 PM 1 
+
+Correct, setting INFO on a package means all classes in the package will log at the INFO level, unless there is a more specific logger for a given class at a different level. For example:
+<logger name="org.apache.nifi.processors" level="INFO"/>
+<logger name="org.apache.nifi.processors.MyProcessor" level="DEBUG"/>
+MyProcessor would log at DEBUG level and all other processors at INFO level.
+The type of information is really dependent on the processor. Generally you should use DEBUG for things you wouldn't expect to be logging all the time, but that might be helpful if someone was trying to troubleshoot something. 
+Mohammed El Moumni   Bryan Bende · Mar 09, 2017 at 05:15 PM 0 
+
+Ok thanks again !
+ 
+
+Answer by jpercivall · Oct 24, 2016 at 02:12 PM 
+By default the LogAttribute processor logs to the NiFi App log. It does this because processors are configured to log there by the default configuration in the logback.xml. In order to have a new file that just the LogAttribute Processor uses you can add a new Appender and Logger like so:
+    <appender name="STATUS_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/nifi-status.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <!--
+          For daily rollover, use 'user_%d.log'.
+          For hourly rollover, use 'user_%d{yyyy-MM-dd_HH}.log'.
+          To GZIP rolled files, replace '.log' with '.log.gz'.
+          To ZIP rolled files, replace '.log' with '.log.zip'.
+        -->
+        <fileNamePattern>./logs/nifi-status_%d.log</fileNamePattern>
+        <!-- keep 5 log files worth of history -->
+
+Clear Selection
+	Asus ROG ZENITH EXTREME	TR4	EATX	8	128GB	 (3)	$429.58	Add
+	MSI X399 GAMING PRO CARBON AC	TR4	ATX	8	128GB	 (1)	$289.99	Add
+	Asus PRIME X399-A	TR4	EATX	8	128GB	 (3)	$296.48	Add
+	ASRock X399M Taichi	TR4	Micro ATX	4	64GB	 (1)	$282.98	Add
+	MSI X399 SLI PLUS	TR4	ATX	8	128GB	 (0)	$279.99	Add
+	ASRock X399 Taichi	TR4	ATX	8	128GB	 (2)	$353.98	Add
+	Gigabyte X399 DESIGNARE EX	TR4	ATX	8	128GB	 (1)	$382.05	Add
+	Asus ROG Strix X399-E Gaming	TR4	EATX	8	128GB	 (0)	$347.99	Add
+	Gigabyte X399 AORUS Gaming 7	TR4	ATX	8	128GB	 (1)	$334.89	Add
+	ASRock Fatal1ty X399 Professional Gaming	TR4	ATX	8	128GB	 (0)	$353.98	Add
+Page1
