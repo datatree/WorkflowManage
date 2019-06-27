@@ -1,0 +1,35 @@
+<msg time='2018-07-29T16:38:36.273-04:00' org_id='oracle' comp_id='tnslsnr'
+ type='UNKNOWN' level='16' host_id='LAPTOP-DFH7GT5A'
+ host_addr='fe80::c002:d7b4:700d:1230%7' pid='16872'>
+ <txt>29-JUL-2018 16:38:36 * service_update * data16pr * 0
+ </txt>
+</msg>
+<msg time='2018-07-29T16:38:41.848-04:00' org_id='oracle' comp_id='tnslsnr'
+ type='UNKNOWN' level='16' host_id='LAPTOP-DFH7GT5A'
+ host_addr='fe80::c002:d7b4:700d:1230%7' pid='16872'>
+ <txt>29-JUL-2018 16:38:41 * (CONNECT_DATA=(CID=(PROGRAM=JDBC Thin Client)(HOST=__jdbc__)(USER=Joseph))(SERVICE_NAME=pdt16tst)) * (ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=59846)) * establish * pdt16tst * 0
+ </txt>
+</msg>
+<msg time='2018-07-29T16:38:42.274-04:00' org_id='oracle' comp_id='tnslsnr'
+ type='UNKNOWN' level='16' host_id='LAPTOP-DFH7GT5A'
+ host_addr='fe80::c002:d7b4:700d:1230%7' pid='16872'>
+ <txt>29-JUL-2018 16:38:42 * service_update * data16pr * 0
+ </txt>
+</msg>
+<msg time='2018-07-29T16:38:42.736-04:00' org_id='oracle' comp_id='tnslsnr'
+ type='UNKNOWN' level='16' host_id='LAPTOP-DFH7GT5A'
+ host_addr='fe80::c002:d7b4:700d:1230%7' pid='16872'>
+ <txt>29-JUL-2018 16:38:42 * (CONNECT_DATA=(CID=(PROGRAM=JDBC Thin Client)(HOST=__jdbc__)(USER=Joseph))(SERVICE_NAME=pdt16tst)) * (ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=59847)) * establish * pdt16tst * 0
+ </txt>
+</msg>
+<msg time='2018-07-29T16:39:12.525-04:00' org_id='oracle' comp_id='tnslsnr'
+ type='UNKNOWN' level='16' host_id='LAPTOP-DFH7GT5A'
+ host_addr='fe80::c002:d7b4:700d:1230%7' pid='16872'>
+ <txt>29-JUL-2018 16:39:12 * service_update * data16pr * 0
+ </txt>
+</msg>
+<msg time='2018-07-29T16:39:21.570-04:00' org_id='oracle' comp_id='tnslsnr'
+ type='UNKNOWN' level='16' host_id='LAPTOP-DFH7GT5A'
+ host_addr='fe80::c002:d7b4:700d:1230%7' pid='16872'>
+ <txt>29-JUL-2018 16:39:21 * service_update * data16pr * 0
+ </txt>
