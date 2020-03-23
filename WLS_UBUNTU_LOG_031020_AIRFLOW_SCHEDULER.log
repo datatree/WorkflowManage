@@ -1,0 +1,1540 @@
+jdearce@LAPTOP-I43LI54D:~$ airflow scheduler
+
+
+[2020-03-10 05:51:10,953] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=116
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2020-03-10 05:51:22,647] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 05:51:23,241] {scheduler_job.py:1320} INFO - Starting the scheduler
+[2020-03-10 05:51:23,242] {scheduler_job.py:1328} INFO - Running execute loop for -1 seconds
+[2020-03-10 05:51:23,244] {scheduler_job.py:1329} INFO - Processing each file at most -1 times
+[2020-03-10 05:51:23,245] {scheduler_job.py:1332} INFO - Searching for files in /c/Users/jdearce/airflow/dags
+[2020-03-10 05:51:23,699] {scheduler_job.py:1334} INFO - There are 20 files in /c/Users/jdearce/airflow/dags
+[2020-03-10 05:51:25,747] {scheduler_job.py:1382} INFO - Resetting orphaned tasks for active dag runs
+[2020-03-10 05:51:26,953] {dag_processing.py:556} INFO - Launched DagFileProcessorManager with pid: 268
+[2020-03-10 05:51:26,982] {settings.py:54} INFO - Configured default timezone <Timezone [UTC]>
+[2020-03-10 05:51:27,129] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=268
+[2020-03-10 05:51:31,001] {scheduler_job.py:927} INFO - 5 tasks up for execution:
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.print_date 2020-03-09 00:00:00+00:00 [scheduled]>
+[2020-03-10 05:51:31,089] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 5 task instances ready to be queued
+[2020-03-10 05:51:31,090] {scheduler_job.py:986} INFO - DAG example_skip_dag has 0/16 running and queued tasks
+[2020-03-10 05:51:31,091] {scheduler_job.py:986} INFO - DAG example_skip_dag has 1/16 running and queued tasks
+[2020-03-10 05:51:31,091] {scheduler_job.py:986} INFO - DAG example_skip_dag has 2/16 running and queued tasks
+[2020-03-10 05:51:31,092] {scheduler_job.py:986} INFO - DAG example_skip_dag has 3/16 running and queued tasks
+[2020-03-10 05:51:31,092] {scheduler_job.py:986} INFO - DAG tutorial has 0/16 running and queued tasks
+[2020-03-10 05:51:31,106] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.print_date 2020-03-09 00:00:00+00:00 [scheduled]>
+[2020-03-10 05:51:31,243] {scheduler_job.py:1112} INFO - Setting the following 5 tasks to queued state:
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: tutorial.print_date 2020-03-09 00:00:00+00:00 [queued]>
+[2020-03-10 05:51:31,250] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'always_true_1', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 05:51:31,251] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'always_true_1', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 05:51:31,259] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'always_true_2', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 05:51:31,261] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'always_true_2', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 05:51:31,265] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'skip_operator_1', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 05:51:31,266] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'skip_operator_1', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 05:51:31,270] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'skip_operator_2', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 05:51:31,272] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'skip_operator_2', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 05:51:31,274] {scheduler_job.py:1148} INFO - Sending ('tutorial', 'print_date', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 05:51:31,275] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'tutorial', 'print_date', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-10 05:51:31,281] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'always_true_2', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 05:51:31,281] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'always_true_1', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 05:51:31,286] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'skip_operator_1', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 05:51:31,290] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'skip_operator_2', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 05:51:31,299] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'tutorial', 'print_date', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-10 05:51:36,191] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=312
+[2020-03-10 05:51:36,285] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=314
+[2020-03-10 05:51:36,531] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=311
+[2020-03-10 05:51:36,766] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=313
+[2020-03-10 05:51:36,897] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=315
+[2020-03-10 05:51:37,114] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-09 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:16,159] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 123 open slots and 2 task instances ready to be queued
+[2020-03-10 21:56:16,163] {scheduler_job.py:986} INFO - DAG example_short_circuit_operator has 0/16 running and queued tasks
+[2020-03-10 21:56:16,167] {scheduler_job.py:986} INFO - DAG example_short_circuit_operator has 1/16 running and queued tasks
+[2020-03-10 21:56:16,623] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-09 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:16,730] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-09 00:00:00+00:00 [queued]>
+[2020-03-10 21:56:16,736] {scheduler_job.py:1148} INFO - Sending ('example_short_circuit_operator', 'condition_is_True', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:16,739] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_True', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-10 21:56:16,744] {scheduler_job.py:1148} INFO - Sending ('example_short_circuit_operator', 'condition_is_False', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:16,749] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_False', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-10 21:56:16,764] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_True', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-10 21:56:16,766] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_False', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-10 21:56:18,405] {scheduler_job.py:927} INFO - 14 tasks up for execution:
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 08:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 08:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 08:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:18,542] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 121 open slots and 14 task instances ready to be queued
+[2020-03-10 21:56:18,550] {scheduler_job.py:986} INFO - DAG example_branch_operator has 0/16 running and queued tasks
+[2020-03-10 21:56:18,555] {scheduler_job.py:986} INFO - DAG example_http_operator has 0/16 running and queued tasks
+[2020-03-10 21:56:18,560] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-10 21:56:18,569] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-10 21:56:18,590] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 2/16 running and queued tasks
+[2020-03-10 21:56:18,605] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 3/16 running and queued tasks
+[2020-03-10 21:56:18,611] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 4/16 running and queued tasks
+[2020-03-10 21:56:18,622] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 5/16 running and queued tasks
+[2020-03-10 21:56:18,641] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 6/16 running and queued tasks
+[2020-03-10 21:56:18,661] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 7/16 running and queued tasks
+[2020-03-10 21:56:18,686] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-10 21:56:18,700] {scheduler_job.py:986} INFO - DAG latest_only has 1/16 running and queued tasks
+[2020-03-10 21:56:18,705] {scheduler_job.py:986} INFO - DAG latest_only has 2/16 running and queued tasks
+[2020-03-10 21:56:18,714] {scheduler_job.py:986} INFO - DAG latest_only has 3/16 running and queued tasks
+[2020-03-10 21:56:18,771] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 08:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 08:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 08:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 12:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:19,248] {scheduler_job.py:1112} INFO - Setting the following 14 tasks to queued state:
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 00:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 04:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 04:00:00+00:00 [queued]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 04:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 08:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 08:00:00+00:00 [queued]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 08:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 12:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 12:00:00+00:00 [queued]>
+        <TaskInstance: latest_only.latest_only 2020-03-09 12:00:00+00:00 [queued]>
+[2020-03-10 21:56:19,402] {scheduler_job.py:1148} INFO - Sending ('example_http_operator', 'http_sensor_check', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 6 and queue default
+[2020-03-10 21:56:19,410] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_http_operator', 'http_sensor_check', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py']
+[2020-03-10 21:56:19,419] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-10 21:56:19,425] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,436] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:19,450] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,467] {scheduler_job.py:1148} INFO - Sending ('example_branch_operator', 'run_this_first', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 11 and queue default
+[2020-03-10 21:56:19,503] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_branch_operator', 'run_this_first', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-10 21:56:19,538] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 9, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-10 21:56:19,553] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:56:19,566] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 9, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-10 21:56:19,581] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,594] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 9, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:19,600] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,605] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 9, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-10 21:56:19,613] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:56:19,621] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 9, 8, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-10 21:56:19,630] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,634] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 9, 8, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:19,636] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,644] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 9, 8, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-10 21:56:19,658] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:56:19,663] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 9, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-10 21:56:19,669] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,681] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 9, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:19,685] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,688] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 9, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-10 21:56:19,691] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:56:19,707] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_branch_operator', 'run_this_first', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-10 21:56:19,714] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_http_operator', 'http_sensor_check', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py']
+[2020-03-10 21:56:19,720] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,729] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,739] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,746] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,759] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,767] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,777] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,782] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:19,786] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:19,796] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:56:19,808] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:56:19,814] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:56:19,826] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:56:19,835] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py
+[2020-03-10 21:56:20,888] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:20,969] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-10 21:56:21,039] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:21,040] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:21,044] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:21,046] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-10 21:56:21,057] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-10 21:56:21,248] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-10 21:56:22,564] {cli.py:545} INFO - Running <TaskInstance: tutorial.print_date 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:24,610] {scheduler_job.py:927} INFO - 5 tasks up for execution:
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.print_date 2020-03-10 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:25,127] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.skip_operator_2 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:25,147] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.skip_operator_1 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:25,181] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 107 open slots and 5 task instances ready to be queued
+[2020-03-10 21:56:25,220] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.always_true_1 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:25,234] {scheduler_job.py:986} INFO - DAG example_skip_dag has 4/16 running and queued tasks
+[2020-03-10 21:56:25,247] {scheduler_job.py:986} INFO - DAG example_skip_dag has 5/16 running and queued tasks
+[2020-03-10 21:56:25,263] {scheduler_job.py:986} INFO - DAG example_skip_dag has 6/16 running and queued tasks
+[2020-03-10 21:56:25,270] {scheduler_job.py:986} INFO - DAG example_skip_dag has 7/16 running and queued tasks
+[2020-03-10 21:56:25,277] {scheduler_job.py:986} INFO - DAG tutorial has 1/16 running and queued tasks
+[2020-03-10 21:56:25,316] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.print_date 2020-03-10 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:25,625] {scheduler_job.py:1112} INFO - Setting the following 5 tasks to queued state:
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-10 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-10 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-10 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-10 00:00:00+00:00 [queued]>
+        <TaskInstance: tutorial.print_date 2020-03-10 00:00:00+00:00 [queued]>
+[2020-03-10 21:56:25,997] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'always_true_1', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:26,049] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'always_true_1', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 21:56:26,069] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'always_true_2', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:26,104] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.always_true_2 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:26,129] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'always_true_2', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 21:56:26,289] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'skip_operator_1', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:26,338] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'skip_operator_1', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 21:56:26,419] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'skip_operator_2', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:26,526] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'skip_operator_2', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 21:56:26,560] {scheduler_job.py:1148} INFO - Sending ('tutorial', 'print_date', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:26,613] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'tutorial', 'print_date', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-10 21:56:26,704] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'always_true_1', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 21:56:26,730] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'always_true_2', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 21:56:26,757] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'skip_operator_1', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 21:56:26,775] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'skip_operator_2', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-10 21:56:26,800] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'tutorial', 'print_date', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-10 21:56:35,216] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3919
+[2020-03-10 21:56:35,288] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3921
+[2020-03-10 21:56:35,291] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3912
+[2020-03-10 21:56:35,292] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3909
+[2020-03-10 21:56:35,304] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3917
+[2020-03-10 21:56:35,320] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3866
+[2020-03-10 21:56:35,334] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3916
+[2020-03-10 21:56:35,343] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3915
+[2020-03-10 21:56:35,347] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3918
+[2020-03-10 21:56:35,347] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3911
+[2020-03-10 21:56:35,352] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3971
+[2020-03-10 21:56:35,366] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3968
+[2020-03-10 21:56:35,370] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3922
+[2020-03-10 21:56:35,381] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3865
+[2020-03-10 21:56:35,393] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3920
+[2020-03-10 21:56:35,443] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3913
+[2020-03-10 21:56:35,456] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3969
+[2020-03-10 21:56:35,459] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3914
+[2020-03-10 21:56:35,460] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3967
+[2020-03-10 21:56:35,514] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3910
+[2020-03-10 21:56:35,686] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-10 00:00:00+00:00 [scheduled]>[2020-03-10 21:56:35,833] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=3972
+
+[2020-03-10 21:56:37,794] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 102 open slots and 2 task instances ready to be queued
+[2020-03-10 21:56:37,832] {scheduler_job.py:986} INFO - DAG example_short_circuit_operator has 2/16 running and queued tasks
+[2020-03-10 21:56:37,839] {scheduler_job.py:986} INFO - DAG example_short_circuit_operator has 3/16 running and queued tasks
+[2020-03-10 21:56:38,779] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-10 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-10 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:40,021] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-10 00:00:00+00:00 [queued]>
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-10 00:00:00+00:00 [queued]>
+[2020-03-10 21:56:40,145] {scheduler_job.py:1148} INFO - Sending ('example_short_circuit_operator', 'condition_is_True', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:40,149] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_True', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-10 21:56:40,156] {scheduler_job.py:1148} INFO - Sending ('example_short_circuit_operator', 'condition_is_False', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:40,192] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_False', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-10 21:56:40,315] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_True', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-10 21:56:40,317] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_False', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-10 21:56:47,612] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-10 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:48,314] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 100 open slots and 1 task instances ready to be queued
+[2020-03-10 21:56:48,322] {scheduler_job.py:986} INFO - DAG example_http_operator has 1/16 running and queued tasks
+[2020-03-10 21:56:49,086] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-10 00:00:00+00:00 [scheduled]>[2020-03-10 21:56:49,088] {__init__.py:51} INFO - Using executor LocalExecutor
+
+[2020-03-10 21:56:49,219] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-10 21:56:49,526] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-10 00:00:00+00:00 [queued]>[2020-03-10 21:56:49,531] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:49,532] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:49,535] {__init__.py:51} INFO - Using executor LocalExecutor
+
+[2020-03-10 21:56:49,625] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:56:49,769] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-10 21:56:49,825] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:49,973] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py
+[2020-03-10 21:56:50,029] {scheduler_job.py:1148} INFO - Sending ('example_http_operator', 'http_sensor_check', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 6 and queue default
+[2020-03-10 21:56:50,182] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:56:50,312] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_http_operator', 'http_sensor_check', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py']
+[2020-03-10 21:56:50,400] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_http_operator', 'http_sensor_check', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py']
+[2020-03-10 21:56:50,864] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:50,946] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:56:51,205] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=4093
+[2020-03-10 21:56:51,504] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=4092
+[2020-03-10 21:56:51,642] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:52,068] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:52,098] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:56:52,134] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-09T08:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:52,133] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-09T08:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:52,404] {cli.py:545} INFO - Running <TaskInstance: example_branch_operator.run_this_first 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:52,469] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-09T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:52,533] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:52,556] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:56:52,915] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:52,923] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:56:53,086] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:53,100] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:56:53,174] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:53,187] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-10 21:56:53,188] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:53,204] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2020-03-10 21:56:53,239] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:53,239] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:53,244] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-10 21:56:53,249] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-10 21:56:53,253] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:53,269] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-10 21:56:53,317] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:53,319] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2020-03-10 21:56:53,445] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:53,447] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py
+[2020-03-10 21:56:53,823] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 16:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 16:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:53,837] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 99 open slots and 2 task instances ready to be queued
+[2020-03-10 21:56:53,839] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 8/16 running and queued tasks
+[2020-03-10 21:56:53,842] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 9/16 running and queued tasks
+[2020-03-10 21:56:53,860] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 16:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 16:00:00+00:00 [scheduled]>
+[2020-03-10 21:56:53,926] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-09 16:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09 16:00:00+00:00 [queued]>
+[2020-03-10 21:56:53,940] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 9, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-10 21:56:53,946] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:53,954] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 9, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-10 21:56:53,956] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:53,965] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-09T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:53,976] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-09T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-10 21:56:54,183] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:54,185] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:56:54,716] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:54,738] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-10 21:56:54,839] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09T08:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:54,967] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:54,968] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-10 21:56:55,161] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=4228
+[2020-03-10 21:56:55,290] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:55,297] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py
+[2020-03-10 21:56:57,128] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=4291
+[2020-03-10 21:56:57,543] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=4292
+[2020-03-10 21:56:57,870] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-09T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:58,050] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:58,054] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2020-03-10 21:56:58,408] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:56:58,410] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2020-03-10 21:56:59,199] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:59,520] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:56:59,965] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:00,447] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-09T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:00,533] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.always_true_2 2020-03-10T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:00,605] {cli.py:545} INFO - Running <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:00,612] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.always_true_1 2020-03-10T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:00,686] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.skip_operator_2 2020-03-10T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:00,922] {cli.py:545} INFO - Running <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:00,986] {cli.py:545} INFO - Running <TaskInstance: tutorial.print_date 2020-03-10T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:01,121] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:01,367] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:57:01,369] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py
+[2020-03-10 21:57:01,774] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.skip_operator_1 2020-03-10T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:01,837] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-10 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:57:01,850] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 97 open slots and 1 task instances ready to be queued
+[2020-03-10 21:57:01,850] {scheduler_job.py:986} INFO - DAG example_branch_operator has 1/16 running and queued tasks
+[2020-03-10 21:57:01,867] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-10 00:00:00+00:00 [scheduled]>
+[2020-03-10 21:57:01,907] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:57:01,909] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:57:02,050] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-09T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:02,095] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-10 00:00:00+00:00 [queued]>
+[2020-03-10 21:57:02,097] {scheduler_job.py:1148} INFO - Sending ('example_branch_operator', 'run_this_first', datetime.datetime(2020, 3, 10, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 11 and queue default
+[2020-03-10 21:57:02,098] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_branch_operator', 'run_this_first', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-10 21:57:02,103] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_branch_operator', 'run_this_first', '2020-03-10T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-10 21:57:02,731] {cli.py:545} INFO - Running <TaskInstance: example_http_operator.http_sensor_check 2020-03-09T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:02,940] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:57:02,943] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-10 21:57:04,670] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=4402
+[2020-03-10 21:57:05,045] {cli.py:545} INFO - Running <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-10T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:05,192] {cli.py:545} INFO - Running <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-10T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:05,838] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.latest_only 2020-03-09 16:00:00+00:00 [scheduled]>
+[2020-03-10 21:57:05,850] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 96 open slots and 1 task instances ready to be queued
+[2020-03-10 21:57:05,852] {scheduler_job.py:986} INFO - DAG latest_only has 4/16 running and queued tasks
+[2020-03-10 21:57:05,881] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-09 16:00:00+00:00 [scheduled]>
+[2020-03-10 21:57:05,934] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-09 16:00:00+00:00 [queued]>
+[2020-03-10 21:57:05,936] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 9, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-10 21:57:05,937] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-09T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-10 21:57:06,010] {scheduler_job.py:1232} INFO - Set the following tasks to scheduled state:
+        <TaskInstance: latest_only.latest_only 2020-03-09 16:00:00+00:00 [scheduled]>
+[2020-03-10 21:57:08,282] {cli.py:545} INFO - Running <TaskInstance: example_http_operator.http_sensor_check 2020-03-10T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:08,594] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-09T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:10,050] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-09T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-10 21:57:10,276] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-10 21:57:10,279] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py
+^C[2020-03-10 21:57:16,729] {helpers.py:308} INFO - Sending Signals.SIGTERM to GPID 268
+Process QueuedLocalWorker-28:
+Process QueuedLocalWorker-29:
+Process QueuedLocalWorker-30:
+Process QueuedLocalWorker-31:
+Process QueuedLocalWorker-32:
+Process QueuedLocalWorker-33:
+Process QueuedLocalWorker-4:
+Process QueuedLocalWorker-2:
+Process QueuedLocalWorker-5:
+Process QueuedLocalWorker-7:
+Process QueuedLocalWorker-8:
+Process QueuedLocalWorker-6:
+Process QueuedLocalWorker-11:
+Process QueuedLocalWorker-10:
+Process QueuedLocalWorker-13:
+Process QueuedLocalWorker-14:
+Process QueuedLocalWorker-15:
+Process QueuedLocalWorker-16:
+Process QueuedLocalWorker-12:
+Process QueuedLocalWorker-17:
+Process QueuedLocalWorker-19:
+Process QueuedLocalWorker-20:
+Process QueuedLocalWorker-22:
+Process QueuedLocalWorker-23:
+Process QueuedLocalWorker-24:
+Process QueuedLocalWorker-25:
+Process QueuedLocalWorker-27:
+Process QueuedLocalWorker-18:
+Process QueuedLocalWorker-3:
+Process QueuedLocalWorker-9:
+Process QueuedLocalWorker-21:
+Process QueuedLocalWorker-26:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+Traceback (most recent call last):
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 116, in run
+    self.execute_work(key, command)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 86, in execute_work
+    subprocess.check_call(command, close_fds=True)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 306, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 289, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1477, in wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/usr/lib/python3.6/subprocess.py", line 1424, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+SystemExit: 0
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+SystemExit: 0
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/bin/cli.py", line 91, in sigint_handler
+    sys.exit(0)
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/usr/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "<string>", line 2, in task_done
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "<string>", line 2, in task_done
+  File "/home/jdearce/.local/lib/python3.6/site-packages/airflow/executors/local_executor.py", line 118, in run
+    self.task_queue.task_done()
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "<string>", line 2, in task_done
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "<string>", line 2, in task_done
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+[2020-03-10 21:57:18,756] {helpers.py:286} INFO - Process psutil.Process(pid=4591, status='terminated') (4591) terminated with exit code None
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/managers.py", line 756, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 404, in _send_bytes
+    self._send(header + buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+BrokenPipeError: [Errno 32] Broken pipe
+[2020-03-10 21:57:20,193] {helpers.py:286} INFO - Process psutil.Process(pid=4625, status='terminated') (4625) terminated with exit code None
+[2020-03-10 21:57:20,200] {helpers.py:286} INFO - Process psutil.Process(pid=268, status='terminated') (268) terminated with exit code 0
+[2020-03-10 21:57:20,203] {scheduler_job.py:1361} INFO - Exited execute loop
+jdearce@LAPTOP-I43LI54D:~$

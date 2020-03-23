@@ -1,0 +1,117 @@
+jdearce@LAPTOP-I43LI54D:~$ airflow webserver -p 8585
+WARNING:root:/c/Users/jdearce/airflow/logs/scheduler/2020-03-16 already exists
+
+[2020-03-16 22:32:06,350] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=135
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2020-03-16 22:32:12,742] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:32:12,750] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+Running the Gunicorn Server with:
+Workers: 4 sync
+Host: 0.0.0.0:8585
+Timeout: 120
+Logfiles: - -
+=================================================================
+[2020-03-16 22:32:18,732] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=27896
+[2020-03-16 22:32:19 -0400] [27896] [INFO] Starting gunicorn 19.10.0
+[2020-03-16 22:32:19 -0400] [27896] [INFO] Listening at: http://0.0.0.0:8585 (27896)
+[2020-03-16 22:32:19 -0400] [27896] [INFO] Using worker: sync
+[2020-03-16 22:32:19 -0400] [27968] [INFO] Booting worker with pid: 27968
+[2020-03-16 22:32:19 -0400] [27974] [INFO] Booting worker with pid: 27974
+[2020-03-16 22:32:19 -0400] [27975] [INFO] Booting worker with pid: 27975
+[2020-03-16 22:32:19 -0400] [27976] [INFO] Booting worker with pid: 27976
+[2020-03-16 22:32:21,305] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:32:21,368] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:32:21,378] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:32:21,388] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:32:21,461] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:32:21,505] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:32:21,526] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:32:21,611] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+127.0.0.1 - - [16/Mar/2020:22:32:29 -0400] "GET /admin/ HTTP/1.1" 200 120321 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:29 -0400] "GET /admin/admin/bootstrap/bootstrap3/swatch/default/bootstrap.min.css?v=3.3.5 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:29 -0400] "GET /admin/admin/admin/css/bootstrap3/submenu.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:29 -0400] "GET /admin/admin/admin/css/bootstrap3/admin.css?v=1.1.1 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:29 -0400] "GET /admin/admin/bootstrap/bootstrap3/css/bootstrap-theme.min.css?v=3.3.5 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /static/bootstrap-theme.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /static/main.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /static/dataTables.bootstrap.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /admin/admin/vendor/jquery.min.js?v=2.1.4 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /static/bootstrap-toggle.min.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /admin/admin/bootstrap/bootstrap3/js/bootstrap.min.js?v=3.3.5 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /admin/admin/vendor/moment.min.js?v=2.9.0 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /admin/admin/vendor/select2/select2.min.js?v=3.5.2 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /static/jqClock.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:30 -0400] "GET /static/d3.v3.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:31 -0400] "GET /static/jquery.dataTables.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:31 -0400] "GET /admin/admin/bootstrap/bootstrap3/swatch/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0 "http://localhost:8585/admin/admin/bootstrap/bootstrap3/swatch/default/bootstrap.min.css?v=3.3.5" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:31 -0400] "GET /static/loading.gif HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:31 -0400] "GET /static/pin_100.png HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:31 -0400] "GET /static/bootstrap-toggle.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:31 -0400] "GET /static/bootstrap3-typeahead.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:33 -0400] "GET /admin/airflow/blocked HTTP/1.1" 200 476 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:33 -0400] "GET /admin/airflow/dag_stats HTTP/1.1" 200 9506 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:33 -0400] "GET /admin/airflow/task_stats HTTP/1.1" 200 30511 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:35 -0400] "GET /admin/ HTTP/1.1" 200 120321 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:36 -0400] "GET /admin/airflow/blocked HTTP/1.1" 200 476 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:36 -0400] "GET /static/pin_32.png HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:36 -0400] "GET /admin/airflow/dag_stats HTTP/1.1" 200 9506 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+127.0.0.1 - - [16/Mar/2020:22:32:37 -0400] "GET /admin/airflow/task_stats HTTP/1.1" 200 30511 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Edg/80.0.361.66"
+[2020-03-16 22:32:52 -0400] [27896] [INFO] Handling signal: ttin
+[2020-03-16 22:32:53 -0400] [28304] [INFO] Booting worker with pid: 28304
+[2020-03-16 22:32:54,227] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:32:54,241] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:32:56 -0400] [27896] [INFO] Handling signal: ttou
+[2020-03-16 22:33:06 -0400] [27968] [INFO] Worker exiting (pid: 27968)
+[2020-03-16 22:33:37 -0400] [27896] [INFO] Handling signal: ttin
+[2020-03-16 22:33:37 -0400] [28745] [INFO] Booting worker with pid: 28745
+[2020-03-16 22:33:38,063] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:33:38,071] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:33:39 -0400] [27896] [INFO] Handling signal: ttou
+[2020-03-16 22:33:39 -0400] [27974] [INFO] Worker exiting (pid: 27974)
+[2020-03-16 22:34:09 -0400] [27896] [INFO] Handling signal: ttin
+[2020-03-16 22:34:09 -0400] [29104] [INFO] Booting worker with pid: 29104
+[2020-03-16 22:34:10,911] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:34:10,927] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:34:12 -0400] [27896] [INFO] Handling signal: ttou
+[2020-03-16 22:34:12 -0400] [27975] [INFO] Worker exiting (pid: 27975)
+[2020-03-16 22:34:42 -0400] [27896] [INFO] Handling signal: ttin
+[2020-03-16 22:34:42 -0400] [29435] [INFO] Booting worker with pid: 29435
+[2020-03-16 22:34:43,976] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:34:43,985] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:34:45 -0400] [27896] [INFO] Handling signal: ttou
+[2020-03-16 22:34:45 -0400] [27976] [INFO] Worker exiting (pid: 27976)
+[2020-03-16 22:35:16 -0400] [27896] [INFO] Handling signal: ttin
+[2020-03-16 22:35:16 -0400] [29706] [INFO] Booting worker with pid: 29706
+[2020-03-16 22:35:17,838] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:35:17,859] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:35:19 -0400] [27896] [INFO] Handling signal: ttou
+[2020-03-16 22:35:19 -0400] [28304] [INFO] Worker exiting (pid: 28304)
+[2020-03-16 22:35:50 -0400] [27896] [INFO] Handling signal: ttin
+[2020-03-16 22:35:51 -0400] [29898] [INFO] Booting worker with pid: 29898
+[2020-03-16 22:35:52,954] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:35:52,987] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:35:55 -0400] [27896] [INFO] Handling signal: ttou
+[2020-03-16 22:35:55 -0400] [28745] [INFO] Worker exiting (pid: 28745)
+[2020-03-16 22:36:26 -0400] [27896] [INFO] Handling signal: ttin
+[2020-03-16 22:36:26 -0400] [30238] [INFO] Booting worker with pid: 30238
+[2020-03-16 22:36:27,250] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:36:27,288] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:36:28 -0400] [27896] [INFO] Handling signal: ttou
+[2020-03-16 22:36:28 -0400] [29104] [INFO] Worker exiting (pid: 29104)
+[2020-03-16 22:36:59 -0400] [27896] [INFO] Handling signal: ttin
+[2020-03-16 22:36:59 -0400] [30579] [INFO] Booting worker with pid: 30579
+[2020-03-16 22:37:00,674] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-16 22:37:00,718] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-16 22:37:02 -0400] [27896] [INFO] Handling signal: ttou
+[2020-03-16 22:37:02 -0400] [29435] [INFO] Worker exiting (pid: 29435)
+^C[2020-03-16 22:37:07 -0400] [27896] [INFO] Handling signal: int
+[2020-03-16 22:37:07 -0400] [29898] [INFO] Worker exiting (pid: 29898)
+[2020-03-16 22:37:07 -0400] [30579] [INFO] Worker exiting (pid: 30579)
+[2020-03-16 22:37:07 -0400] [29706] [INFO] Worker exiting (pid: 29706)
+[2020-03-16 22:37:07 -0400] [30238] [INFO] Worker exiting (pid: 30238)
+[2020-03-16 22:37:08 -0400] [27896] [INFO] Shutting down: Master
+jdearce@LAPTOP-I43LI54D:~$
