@@ -1,0 +1,292 @@
+jdearce@LAPTOP-I43LI54D:~$ sudo service postgresql start
+[sudo] password for jdearce:
+
+ * Starting PostgreSQL 10 database server
+                                                                                                                 [ OK ]
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 07:58 ?        00:00:00 /init
+root         5     1  0 07:59 tty1     00:00:00 /init
+root         6     1  0 07:59 tty2     00:00:00 /init
+jdearce      7     5  0 07:59 tty1     00:00:00 -bash
+jdearce      8     6  0 07:59 tty2     00:00:00 -bash
+root        33     1  0 08:00 tty3     00:00:00 /init
+jdearce     34    33  0 08:00 tty3     00:00:00 -bash
+postgres    93     1  0 08:01 ?        00:01:09 /usr/lib/postgresql/10/bin/postgres -D /var/lib/postgresql/10/main -c co
+postgres    95    93  0 08:02 ?        00:00:00 postgres: 10/main: checkpointer process
+postgres    96    93  0 08:02 ?        00:00:00 postgres: 10/main: writer process
+postgres    97    93  0 08:02 ?        00:00:00 postgres: 10/main: wal writer process
+postgres    98    93  0 08:02 ?        00:00:00 postgres: 10/main: autovacuum launcher process
+postgres    99    93  0 08:02 ?        00:00:05 postgres: 10/main: stats collector process
+postgres   100    93  0 08:02 ?        00:00:00 postgres: 10/main: bgworker: logical replication launcher
+jdearce    113     8  0 08:03 tty2     00:00:11 /usr/bin/python3 /home/jdearce/.local/bin/airflow webserver -p 8585
+jdearce    114    34  0 08:03 tty3     00:00:26 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+postgres   141    93  0 08:08 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(50963) idle
+jdearce    143   114  0 08:08 tty3     00:00:14 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    151   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    155   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    159   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    163   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    167   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    171   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    175   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    179   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    183   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    187   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    191   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    195   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    199   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    203   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    207   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    211   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    215   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    219   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    223   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    227   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    231   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    235   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    239   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    243   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    247   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    251   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    255   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    259   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    263   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    267   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    271   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    275   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    279   114  0 08:09 tty3     00:00:59 airflow scheduler -- DagFileProcessorManager
+jdearce    309   113  0 08:09 tty2     00:00:03 gunicorn: master [airflow-webserver]
+postgres 15056    93  0 12:53 ?        00:00:04 postgres: 10/main: airflow airflow 127.0.0.1(54524) idle
+postgres 15068    93  0 12:53 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(54630) idle
+jdearce  25571   309  1 13:10 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 25579    93  0 13:10 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(56883) idle
+jdearce  25897   309  1 13:10 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 25905    93  0 13:10 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(56960) idle
+jdearce  26231   309  2 13:11 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 26247    93  0 13:11 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57017) idle
+jdearce  26609   309  8 13:11 tty2     00:00:00 [ready] gunicorn: worker [airflow-webserver]
+postgres 26625    93  0 13:11 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57080) idle
+jdearce  26734   279  0 13:11 tty3     00:00:00 [airflow schedul] <defunct>
+jdearce  26737   279  0 13:11 tty3     00:00:00 [airflow schedul] <defunct>
+jdearce  26746     7  0 13:11 tty1     00:00:00 ps -ef
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 07:58 ?        00:00:00 /init
+root         5     1  0 07:59 tty1     00:00:00 /init
+root         6     1  0 07:59 tty2     00:00:00 /init
+jdearce      7     5  0 07:59 tty1     00:00:00 -bash
+jdearce      8     6  0 07:59 tty2     00:00:00 -bash
+root        33     1  0 08:00 tty3     00:00:00 /init
+jdearce     34    33  0 08:00 tty3     00:00:00 -bash
+postgres    93     1  0 08:01 ?        00:01:09 /usr/lib/postgresql/10/bin/postgres -D /var/lib/postgresql/10/main -c co
+postgres    95    93  0 08:02 ?        00:00:00 postgres: 10/main: checkpointer process
+postgres    96    93  0 08:02 ?        00:00:00 postgres: 10/main: writer process
+postgres    97    93  0 08:02 ?        00:00:00 postgres: 10/main: wal writer process
+postgres    98    93  0 08:02 ?        00:00:00 postgres: 10/main: autovacuum launcher process
+postgres    99    93  0 08:02 ?        00:00:05 postgres: 10/main: stats collector process
+postgres   100    93  0 08:02 ?        00:00:00 postgres: 10/main: bgworker: logical replication launcher
+jdearce    113     8  0 08:03 tty2     00:00:11 /usr/bin/python3 /home/jdearce/.local/bin/airflow webserver -p 8585
+jdearce    114    34  0 08:03 tty3     00:00:26 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+postgres   141    93  0 08:08 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(50963) idle
+jdearce    143   114  0 08:08 tty3     00:00:14 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    151   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    155   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    159   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    163   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    167   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    171   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    175   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    179   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    183   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    187   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    191   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    195   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    199   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    203   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    207   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    211   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    215   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    219   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    223   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    227   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    231   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    235   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    239   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    243   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    247   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    251   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    255   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    259   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    263   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    267   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    271   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    275   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    279   114  0 08:09 tty3     00:00:59 airflow scheduler -- DagFileProcessorManager
+jdearce    309   113  0 08:09 tty2     00:00:03 gunicorn: master [airflow-webserver]
+postgres 15056    93  0 12:53 ?        00:00:04 postgres: 10/main: airflow airflow 127.0.0.1(54524) idle
+postgres 15068    93  0 12:53 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(54630) idle
+jdearce  25571   309  1 13:10 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 25579    93  0 13:10 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(56883) idle
+jdearce  25897   309  1 13:10 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 25905    93  0 13:10 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(56960) idle
+jdearce  26231   309  2 13:11 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 26247    93  0 13:11 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57017) idle
+jdearce  26609   309  6 13:11 tty2     00:00:00 [ready] gunicorn: worker [airflow-webserver]
+postgres 26625    93  0 13:11 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57080) idle
+jdearce  26772   279  0 13:12 tty3     00:00:00 [airflow schedul] <defunct>
+jdearce  26775   279  0 13:12 tty3     00:00:00 airflow scheduler - DagFileProcessor /home/jdearce/.local/li
+postgres 26779    93  0 13:12 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57106) idle
+jdearce  26780     7  0 13:12 tty1     00:00:00 ps -ef
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 07:58 ?        00:00:00 /init
+root         5     1  0 07:59 tty1     00:00:00 /init
+root         6     1  0 07:59 tty2     00:00:00 /init
+jdearce      7     5  0 07:59 tty1     00:00:00 -bash
+jdearce      8     6  0 07:59 tty2     00:00:00 -bash
+root        33     1  0 08:00 tty3     00:00:00 /init
+jdearce     34    33  0 08:00 tty3     00:00:00 -bash
+postgres    93     1  0 08:01 ?        00:01:09 /usr/lib/postgresql/10/bin/postgres -D /var/lib/postgresql/10/main -c co
+postgres    95    93  0 08:02 ?        00:00:00 postgres: 10/main: checkpointer process
+postgres    96    93  0 08:02 ?        00:00:00 postgres: 10/main: writer process
+postgres    97    93  0 08:02 ?        00:00:00 postgres: 10/main: wal writer process
+postgres    98    93  0 08:02 ?        00:00:00 postgres: 10/main: autovacuum launcher process
+postgres    99    93  0 08:02 ?        00:00:05 postgres: 10/main: stats collector process
+postgres   100    93  0 08:02 ?        00:00:00 postgres: 10/main: bgworker: logical replication launcher
+jdearce    113     8  0 08:03 tty2     00:00:11 /usr/bin/python3 /home/jdearce/.local/bin/airflow webserver -p 8585
+jdearce    114    34  0 08:03 tty3     00:00:26 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+postgres   141    93  0 08:08 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(50963) idle
+jdearce    143   114  0 08:08 tty3     00:00:14 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    151   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    155   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    159   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    163   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    167   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    171   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    175   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    179   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    183   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    187   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    191   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    195   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    199   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    203   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    207   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    211   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    215   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    219   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    223   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    227   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    231   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    235   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    239   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    243   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    247   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    251   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    255   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    259   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    263   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    267   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    271   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    275   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    279   114  0 08:09 tty3     00:01:00 airflow scheduler -- DagFileProcessorManager
+jdearce    309   113  0 08:09 tty2     00:00:03 gunicorn: master [airflow-webserver]
+postgres 15056    93  0 12:53 ?        00:00:04 postgres: 10/main: airflow airflow 127.0.0.1(54524) idle
+postgres 15068    93  0 12:53 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(54630) idle
+jdearce  25571   309  0 13:10 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 25579    93  0 13:10 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(56883) idle
+jdearce  25897   309  1 13:10 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 25905    93  0 13:10 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(56960) idle
+jdearce  26231   309  2 13:11 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 26247    93  0 13:11 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57017) idle
+jdearce  26609   309  5 13:11 tty2     00:00:00 [ready] gunicorn: worker [airflow-webserver]
+postgres 26625    93  0 13:11 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57080) idle
+jdearce  26809   279  0 13:12 tty3     00:00:00 airflow scheduler - DagFileProcessor /home/jdearce/.local/li
+jdearce  26812   279  0 13:12 tty3     00:00:00 [airflow schedul] <defunct>
+jdearce  26815     7  0 13:12 tty1     00:00:00 ps -ef
+postgres 26816    93  0 13:12 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57111) idle
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 07:58 ?        00:00:00 /init
+root         5     1  0 07:59 tty1     00:00:00 /init
+root         6     1  0 07:59 tty2     00:00:00 /init
+jdearce      7     5  0 07:59 tty1     00:00:00 -bash
+jdearce      8     6  0 07:59 tty2     00:00:00 -bash
+root        33     1  0 08:00 tty3     00:00:00 /init
+jdearce     34    33  0 08:00 tty3     00:00:00 -bash
+postgres    93     1  0 08:01 ?        00:01:09 /usr/lib/postgresql/10/bin/postgres -D /var/lib/postgresql/10/main -c co
+postgres    95    93  0 08:02 ?        00:00:00 postgres: 10/main: checkpointer process
+postgres    96    93  0 08:02 ?        00:00:00 postgres: 10/main: writer process
+postgres    97    93  0 08:02 ?        00:00:00 postgres: 10/main: wal writer process
+postgres    98    93  0 08:02 ?        00:00:00 postgres: 10/main: autovacuum launcher process
+postgres    99    93  0 08:02 ?        00:00:05 postgres: 10/main: stats collector process
+postgres   100    93  0 08:02 ?        00:00:00 postgres: 10/main: bgworker: logical replication launcher
+jdearce    113     8  0 08:03 tty2     00:00:11 /usr/bin/python3 /home/jdearce/.local/bin/airflow webserver -p 8585
+jdearce    114    34  0 08:03 tty3     00:00:26 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+postgres   141    93  0 08:08 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(50963) idle
+jdearce    143   114  0 08:08 tty3     00:00:14 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    151   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    155   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    159   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    163   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    167   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    171   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    175   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    179   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    183   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    187   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    191   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    195   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    199   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    203   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    207   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    211   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    215   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    219   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    223   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    227   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    231   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    235   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    239   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    243   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    247   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    251   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    255   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    259   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    263   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    267   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    271   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    275   114  0 08:08 tty3     00:00:00 /usr/bin/python3 /home/jdearce/.local/bin/airflow scheduler
+jdearce    279   114  0 08:09 tty3     00:01:00 airflow scheduler -- DagFileProcessorManager
+jdearce    309   113  0 08:09 tty2     00:00:03 gunicorn: master [airflow-webserver]
+postgres 15056    93  0 12:53 ?        00:00:04 postgres: 10/main: airflow airflow 127.0.0.1(54524) idle
+postgres 15068    93  0 12:53 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(54630) idle
+jdearce  25571   309  0 13:10 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 25579    93  0 13:10 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(56883) idle
+jdearce  25897   309  1 13:10 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 25905    93  0 13:10 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(56960) idle
+jdearce  26231   309  2 13:11 tty2     00:00:01 [ready] gunicorn: worker [airflow-webserver]
+postgres 26247    93  0 13:11 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57017) idle
+jdearce  26609   309  3 13:11 tty2     00:00:00 [ready] gunicorn: worker [airflow-webserver]
+postgres 26625    93  0 13:11 ?        00:00:00 postgres: 10/main: airflow airflow 127.0.0.1(57080) idle
+jdearce  26882   279  0 13:12 tty3     00:00:00 [airflow schedul] <defunct>
+jdearce  26885   279  0 13:12 tty3     00:00:00 [airflow schedul] <defunct>
+jdearce  26892     7  0 13:12 tty1     00:00:00 ps -ef
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
+jdearce@LAPTOP-I43LI54D:~$
