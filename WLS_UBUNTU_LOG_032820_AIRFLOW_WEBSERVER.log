@@ -1,0 +1,2034 @@
+jdearce@LAPTOP-I43LI54D:~$ airflow webserver -p 8585
+[2020-03-28 07:17:07,476] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=113
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2020-03-28 07:17:46,059] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:17:46,063] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+Running the Gunicorn Server with:
+Workers: 4 sync
+Host: 0.0.0.0:8585
+Timeout: 120
+Logfiles: - -
+=================================================================
+[2020-03-28 07:17:50,083] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=283
+[2020-03-28 07:17:50 -0400] [283] [INFO] Starting gunicorn 19.10.0
+[2020-03-28 07:17:50 -0400] [283] [INFO] Listening at: http://0.0.0.0:8585 (283)
+[2020-03-28 07:17:50 -0400] [283] [INFO] Using worker: sync
+[2020-03-28 07:17:50 -0400] [311] [INFO] Booting worker with pid: 311
+[2020-03-28 07:17:50 -0400] [312] [INFO] Booting worker with pid: 312
+[2020-03-28 07:17:50 -0400] [313] [INFO] Booting worker with pid: 313
+[2020-03-28 07:17:50 -0400] [317] [INFO] Booting worker with pid: 317
+[2020-03-28 07:17:51,190] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:17:51,221] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:17:51,350] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:17:51,408] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:17:51,453] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:17:51,461] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:17:51,525] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:17:51,528] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:18:22 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:18:22 -0400] [1004] [INFO] Booting worker with pid: 1004
+[2020-03-28 07:18:23,541] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:23,544] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:18:24 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:18:24 -0400] [311] [INFO] Worker exiting (pid: 311)
+[2020-03-28 07:18:55 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:18:55 -0400] [1508] [INFO] Booting worker with pid: 1508
+[2020-03-28 07:18:56,000] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:56,004] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:18:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:18:56 -0400] [312] [INFO] Worker exiting (pid: 312)
+[2020-03-28 07:19:26 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:19:26 -0400] [1944] [INFO] Booting worker with pid: 1944
+[2020-03-28 07:19:27,436] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:19:27,438] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:19:28 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:19:28 -0400] [313] [INFO] Worker exiting (pid: 313)
+[2020-03-28 07:19:58 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:19:58 -0400] [2330] [INFO] Booting worker with pid: 2330
+[2020-03-28 07:19:58,967] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:19:58,969] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:19:59 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:19:59 -0400] [317] [INFO] Worker exiting (pid: 317)
+[2020-03-28 07:20:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:20:29 -0400] [2717] [INFO] Booting worker with pid: 2717
+[2020-03-28 07:20:30,444] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:20:30,446] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:20:31 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:20:31 -0400] [1004] [INFO] Worker exiting (pid: 1004)
+[2020-03-28 07:21:01 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:21:01 -0400] [3089] [INFO] Booting worker with pid: 3089
+[2020-03-28 07:21:01,910] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:21:01,912] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:21:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:21:02 -0400] [1508] [INFO] Worker exiting (pid: 1508)
+[2020-03-28 07:21:32 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:21:32 -0400] [3465] [INFO] Booting worker with pid: 3465
+[2020-03-28 07:21:33,399] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:21:33,401] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:21:34 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:21:34 -0400] [1944] [INFO] Worker exiting (pid: 1944)
+[2020-03-28 07:22:04 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:22:04 -0400] [3835] [INFO] Booting worker with pid: 3835
+[2020-03-28 07:22:04,910] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:22:04,912] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:22:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:22:05 -0400] [2330] [INFO] Worker exiting (pid: 2330)
+[2020-03-28 07:22:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:22:35 -0400] [4212] [INFO] Booting worker with pid: 4212
+[2020-03-28 07:22:36,457] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:22:36,460] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:22:38 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:22:38 -0400] [2717] [INFO] Worker exiting (pid: 2717)
+[2020-03-28 07:23:08 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:23:08 -0400] [4578] [INFO] Booting worker with pid: 4578
+[2020-03-28 07:23:08,980] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:23:08,982] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:23:10 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:23:10 -0400] [3089] [INFO] Worker exiting (pid: 3089)
+[2020-03-28 07:23:40 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:23:40 -0400] [4957] [INFO] Booting worker with pid: 4957
+[2020-03-28 07:23:41,518] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:23:41,521] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:23:42 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:23:42 -0400] [3465] [INFO] Worker exiting (pid: 3465)
+[2020-03-28 07:24:12 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:24:12 -0400] [5321] [INFO] Booting worker with pid: 5321
+[2020-03-28 07:24:13,019] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:24:13,022] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:24:13 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:24:13 -0400] [3835] [INFO] Worker exiting (pid: 3835)
+[2020-03-28 07:24:43 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:24:43 -0400] [5689] [INFO] Booting worker with pid: 5689
+[2020-03-28 07:24:44,890] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:24:44,892] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:24:46 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:24:46 -0400] [4212] [INFO] Worker exiting (pid: 4212)
+[2020-03-28 07:25:16 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:25:16 -0400] [6075] [INFO] Booting worker with pid: 6075
+[2020-03-28 07:25:17,002] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:25:17,005] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:25:17 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:25:17 -0400] [4578] [INFO] Worker exiting (pid: 4578)
+[2020-03-28 07:25:47 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:25:47 -0400] [6445] [INFO] Booting worker with pid: 6445
+[2020-03-28 07:25:48,480] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:25:48,483] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:25:49 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:25:49 -0400] [4957] [INFO] Worker exiting (pid: 4957)
+[2020-03-28 07:26:19 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:26:19 -0400] [6811] [INFO] Booting worker with pid: 6811
+[2020-03-28 07:26:19,986] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:26:19,989] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:26:20 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:26:20 -0400] [5321] [INFO] Worker exiting (pid: 5321)
+[2020-03-28 07:26:50 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:26:50 -0400] [7160] [INFO] Booting worker with pid: 7160
+[2020-03-28 07:26:51,607] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:26:51,611] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:26:52 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:26:52 -0400] [5689] [INFO] Worker exiting (pid: 5689)
+127.0.0.1 - - [28/Mar/2020:07:26:52 -0400] "GET /admin/ HTTP/1.1" 200 120321 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:52 -0400] "GET /admin/admin/bootstrap/bootstrap3/swatch/default/bootstrap.min.css?v=3.3.5 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:52 -0400] "GET /admin/admin/bootstrap/bootstrap3/css/bootstrap-theme.min.css?v=3.3.5 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:52 -0400] "GET /admin/admin/admin/css/bootstrap3/admin.css?v=1.1.1 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:52 -0400] "GET /admin/admin/admin/css/bootstrap3/submenu.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:53 -0400] "GET /static/bootstrap-theme.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:54 -0400] "GET /static/main.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:54 -0400] "GET /static/dataTables.bootstrap.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:54 -0400] "GET /static/bootstrap-toggle.min.css HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:54 -0400] "GET /admin/admin/bootstrap/bootstrap3/js/bootstrap.min.js?v=3.3.5 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:54 -0400] "GET /admin/admin/vendor/jquery.min.js?v=2.1.4 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:54 -0400] "GET /admin/admin/vendor/moment.min.js?v=2.9.0 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:54 -0400] "GET /admin/admin/vendor/select2/select2.min.js?v=3.5.2 HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:55 -0400] "GET /static/jqClock.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:55 -0400] "GET /static/d3.v3.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:55 -0400] "GET /static/jquery.dataTables.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:26:55 -0400] "GET /static/bootstrap-toggle.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:27:01 -0400] "GET /static/bootstrap3-typeahead.min.js HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:27:01 -0400] "GET /static/pin_100.png HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:27:03 -0400] "GET /static/loading.gif HTTP/1.1" 304 0 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:27:05 -0400] "GET /admin/admin/bootstrap/bootstrap3/swatch/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0 "http://localhost:8585/admin/admin/bootstrap/bootstrap3/swatch/default/bootstrap.min.css?v=3.3.5" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:27:08 -0400] "GET /admin/airflow/blocked HTTP/1.1" 200 2 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:27:08 -0400] "GET /admin/airflow/dag_stats HTTP/1.1" 200 9506 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+127.0.0.1 - - [28/Mar/2020:07:27:13 -0400] "GET /admin/airflow/task_stats HTTP/1.1" 200 30510 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+[2020-03-28 07:27:22 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:27:22 -0400] [7371] [INFO] Booting worker with pid: 7371
+[2020-03-28 07:27:23,365] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:27:23,367] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:27:23 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:27:23 -0400] [6075] [INFO] Worker exiting (pid: 6075)
+[2020-03-28 07:27:54 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:27:54 -0400] [7651] [INFO] Booting worker with pid: 7651
+[2020-03-28 07:27:55,226] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:27:55,271] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:27:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:27:56 -0400] [6445] [INFO] Worker exiting (pid: 6445)
+[2020-03-28 07:28:27 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:28:27 -0400] [8021] [INFO] Booting worker with pid: 8021
+[2020-03-28 07:28:27,692] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:28:27,694] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:28:28 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:29:06 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:6811)
+[2020-03-28 07:29:06 -0400] [6811] [INFO] Worker exiting (pid: 6811)
+[2020-03-28 07:29:36 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:29:36 -0400] [8822] [INFO] Booting worker with pid: 8822
+[2020-03-28 07:29:37,239] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:29:37,241] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:29:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:29:37 -0400] [7160] [INFO] Worker exiting (pid: 7160)
+[2020-03-28 07:30:08 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:30:08 -0400] [9198] [INFO] Booting worker with pid: 9198
+[2020-03-28 07:30:08,814] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:30:08,818] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:30:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:30:09 -0400] [7371] [INFO] Worker exiting (pid: 7371)
+[2020-03-28 07:30:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:30:39 -0400] [9565] [INFO] Booting worker with pid: 9565
+[2020-03-28 07:30:40,264] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:30:40,266] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:30:40 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:30:40 -0400] [7651] [INFO] Worker exiting (pid: 7651)
+[2020-03-28 07:31:11 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:31:11 -0400] [9933] [INFO] Booting worker with pid: 9933
+[2020-03-28 07:31:11,806] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:31:11,809] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:31:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:31:12 -0400] [8021] [INFO] Worker exiting (pid: 8021)
+[2020-03-28 07:31:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:31:42 -0400] [10299] [INFO] Booting worker with pid: 10299
+[2020-03-28 07:31:43,317] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:31:43,319] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:31:43 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:31:43 -0400] [8822] [INFO] Worker exiting (pid: 8822)
+[2020-03-28 07:32:14 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:32:14 -0400] [10677] [INFO] Booting worker with pid: 10677
+[2020-03-28 07:32:14,997] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:32:14,999] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:32:15 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:32:15 -0400] [9198] [INFO] Worker exiting (pid: 9198)
+[2020-03-28 07:32:45 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:32:45 -0400] [11043] [INFO] Booting worker with pid: 11043
+[2020-03-28 07:32:46,567] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:32:46,570] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:32:47 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:32:47 -0400] [9565] [INFO] Worker exiting (pid: 9565)
+[2020-03-28 07:33:17 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:33:17 -0400] [11409] [INFO] Booting worker with pid: 11409
+[2020-03-28 07:33:17,959] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:33:17,962] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:33:18 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:33:18 -0400] [9933] [INFO] Worker exiting (pid: 9933)
+[2020-03-28 07:33:48 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:33:48 -0400] [11785] [INFO] Booting worker with pid: 11785
+[2020-03-28 07:33:49,488] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:33:49,491] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:33:50 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:33:50 -0400] [10299] [INFO] Worker exiting (pid: 10299)
+[2020-03-28 07:34:20 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:34:20 -0400] [12153] [INFO] Booting worker with pid: 12153
+[2020-03-28 07:34:21,025] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:34:21,028] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:34:21 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:34:21 -0400] [10677] [INFO] Worker exiting (pid: 10677)
+[2020-03-28 07:34:51 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:34:51 -0400] [12519] [INFO] Booting worker with pid: 12519
+[2020-03-28 07:34:52,581] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:34:52,584] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:34:53 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:34:53 -0400] [11043] [INFO] Worker exiting (pid: 11043)
+[2020-03-28 07:35:23 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:35:23 -0400] [12885] [INFO] Booting worker with pid: 12885
+[2020-03-28 07:35:24,002] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:35:24,004] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:35:24 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:35:24 -0400] [11409] [INFO] Worker exiting (pid: 11409)
+[2020-03-28 07:35:54 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:35:54 -0400] [13261] [INFO] Booting worker with pid: 13261
+[2020-03-28 07:35:55,504] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:35:55,507] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:35:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:35:56 -0400] [11785] [INFO] Worker exiting (pid: 11785)
+[2020-03-28 07:36:26 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:36:26 -0400] [13629] [INFO] Booting worker with pid: 13629
+[2020-03-28 07:36:27,122] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:36:27,125] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:36:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:36:27 -0400] [12153] [INFO] Worker exiting (pid: 12153)
+[2020-03-28 07:36:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:36:58 -0400] [13995] [INFO] Booting worker with pid: 13995
+[2020-03-28 07:36:58,595] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:36:58,599] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:36:59 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:36:59 -0400] [12519] [INFO] Worker exiting (pid: 12519)
+[2020-03-28 07:37:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:37:29 -0400] [14371] [INFO] Booting worker with pid: 14371
+[2020-03-28 07:37:30,146] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:37:30,149] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:37:30 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:37:30 -0400] [12885] [INFO] Worker exiting (pid: 12885)
+[2020-03-28 07:38:01 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:38:01 -0400] [14739] [INFO] Booting worker with pid: 14739
+[2020-03-28 07:38:02,080] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:38:02,082] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:38:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:38:02 -0400] [13261] [INFO] Worker exiting (pid: 13261)
+[2020-03-28 07:38:33 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:38:33 -0400] [15117] [INFO] Booting worker with pid: 15117
+[2020-03-28 07:38:33,594] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:38:33,596] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:38:34 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:38:34 -0400] [13629] [INFO] Worker exiting (pid: 13629)
+[2020-03-28 07:39:04 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:39:04 -0400] [15483] [INFO] Booting worker with pid: 15483
+[2020-03-28 07:39:05,222] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:39:05,225] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:39:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:39:05 -0400] [13995] [INFO] Worker exiting (pid: 13995)
+[2020-03-28 07:39:36 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:39:36 -0400] [15856] [INFO] Booting worker with pid: 15856
+[2020-03-28 07:39:36,753] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:39:36,756] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:39:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:39:37 -0400] [14371] [INFO] Worker exiting (pid: 14371)
+[2020-03-28 07:40:08 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:40:08 -0400] [16227] [INFO] Booting worker with pid: 16227
+[2020-03-28 07:40:08,609] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:40:08,611] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:40:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:40:09 -0400] [14739] [INFO] Worker exiting (pid: 14739)
+[2020-03-28 07:40:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:40:39 -0400] [16602] [INFO] Booting worker with pid: 16602
+[2020-03-28 07:40:40,224] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:40:40,227] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:40:41 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:40:41 -0400] [15117] [INFO] Worker exiting (pid: 15117)
+[2020-03-28 07:41:12 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:41:12 -0400] [16984] [INFO] Booting worker with pid: 16984
+[2020-03-28 07:41:12,729] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:41:12,731] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:41:13 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:41:13 -0400] [15483] [INFO] Worker exiting (pid: 15483)
+[2020-03-28 07:41:44 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:41:44 -0400] [17360] [INFO] Booting worker with pid: 17360
+[2020-03-28 07:41:44,714] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:41:44,716] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:41:45 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:41:45 -0400] [15856] [INFO] Worker exiting (pid: 15856)
+[2020-03-28 07:42:15 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:42:15 -0400] [17728] [INFO] Booting worker with pid: 17728
+[2020-03-28 07:42:16,158] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:42:16,162] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:42:17 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:42:17 -0400] [16227] [INFO] Worker exiting (pid: 16227)
+[2020-03-28 07:42:48 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:42:48 -0400] [18106] [INFO] Booting worker with pid: 18106
+[2020-03-28 07:42:48,706] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:42:48,709] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:42:49 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:42:49 -0400] [16602] [INFO] Worker exiting (pid: 16602)
+[2020-03-28 07:43:19 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:43:19 -0400] [18479] [INFO] Booting worker with pid: 18479
+[2020-03-28 07:43:20,486] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:43:20,491] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:43:21 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:43:21 -0400] [16984] [INFO] Worker exiting (pid: 16984)
+[2020-03-28 07:43:52 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:43:52 -0400] [18862] [INFO] Booting worker with pid: 18862
+[2020-03-28 07:43:52,676] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:43:52,678] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:43:53 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:43:53 -0400] [17360] [INFO] Worker exiting (pid: 17360)
+[2020-03-28 07:44:23 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:44:23 -0400] [19228] [INFO] Booting worker with pid: 19228
+[2020-03-28 07:44:24,461] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:44:24,463] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:44:25 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:44:25 -0400] [17728] [INFO] Worker exiting (pid: 17728)
+[2020-03-28 07:44:55 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:44:55 -0400] [19604] [INFO] Booting worker with pid: 19604
+[2020-03-28 07:44:55,961] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:44:55,964] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:44:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:44:56 -0400] [18106] [INFO] Worker exiting (pid: 18106)
+[2020-03-28 07:45:26 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:45:26 -0400] [19971] [INFO] Booting worker with pid: 19971
+[2020-03-28 07:45:27,425] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:45:27,427] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:45:28 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:45:28 -0400] [18479] [INFO] Worker exiting (pid: 18479)
+[2020-03-28 07:45:58 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:45:58 -0400] [20337] [INFO] Booting worker with pid: 20337
+[2020-03-28 07:45:58,940] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:45:58,943] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:45:59 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:45:59 -0400] [18862] [INFO] Worker exiting (pid: 18862)
+[2020-03-28 07:46:30 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:46:30 -0400] [20715] [INFO] Booting worker with pid: 20715
+[2020-03-28 07:46:30,844] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:46:30,846] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:46:31 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:46:31 -0400] [19228] [INFO] Worker exiting (pid: 19228)
+[2020-03-28 07:47:01 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:47:01 -0400] [21081] [INFO] Booting worker with pid: 21081
+[2020-03-28 07:47:02,360] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:47:02,362] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:47:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:47:02 -0400] [19604] [INFO] Worker exiting (pid: 19604)
+[2020-03-28 07:47:33 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:47:33 -0400] [21455] [INFO] Booting worker with pid: 21455
+[2020-03-28 07:47:33,849] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:47:33,853] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:47:34 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:47:34 -0400] [19971] [INFO] Worker exiting (pid: 19971)
+[2020-03-28 07:48:04 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:48:04 -0400] [21827] [INFO] Booting worker with pid: 21827
+[2020-03-28 07:48:05,306] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:48:05,308] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:48:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:48:05 -0400] [20337] [INFO] Worker exiting (pid: 20337)
+[2020-03-28 07:48:36 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:48:36 -0400] [22193] [INFO] Booting worker with pid: 22193
+[2020-03-28 07:48:36,882] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:48:36,885] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:48:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:48:37 -0400] [20715] [INFO] Worker exiting (pid: 20715)
+[2020-03-28 07:49:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:49:07 -0400] [22567] [INFO] Booting worker with pid: 22567
+[2020-03-28 07:49:08,565] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:49:08,567] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:49:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:49:09 -0400] [21081] [INFO] Worker exiting (pid: 21081)
+[2020-03-28 07:49:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:49:39 -0400] [22937] [INFO] Booting worker with pid: 22937
+[2020-03-28 07:49:39,997] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:49:39,999] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:49:40 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:49:40 -0400] [21455] [INFO] Worker exiting (pid: 21455)
+[2020-03-28 07:50:10 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:50:10 -0400] [23304] [INFO] Booting worker with pid: 23304
+[2020-03-28 07:50:11,581] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:50:11,583] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:50:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:50:12 -0400] [21827] [INFO] Worker exiting (pid: 21827)
+[2020-03-28 07:50:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:50:42 -0400] [23678] [INFO] Booting worker with pid: 23678
+[2020-03-28 07:50:43,122] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:50:43,125] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:50:43 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:50:43 -0400] [22193] [INFO] Worker exiting (pid: 22193)
+[2020-03-28 07:51:14 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:51:14 -0400] [24048] [INFO] Booting worker with pid: 24048
+[2020-03-28 07:51:14,758] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:51:14,760] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:51:15 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:51:15 -0400] [22567] [INFO] Worker exiting (pid: 22567)
+[2020-03-28 07:51:46 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:51:46 -0400] [24426] [INFO] Booting worker with pid: 24426
+[2020-03-28 07:51:46,688] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:51:46,690] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:51:47 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:51:47 -0400] [22937] [INFO] Worker exiting (pid: 22937)
+[2020-03-28 07:52:17 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:52:17 -0400] [24792] [INFO] Booting worker with pid: 24792
+[2020-03-28 07:52:18,246] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:52:18,249] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:52:18 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:52:18 -0400] [23304] [INFO] Worker exiting (pid: 23304)
+[2020-03-28 07:52:49 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:52:49 -0400] [25170] [INFO] Booting worker with pid: 25170
+[2020-03-28 07:52:50,014] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:52:50,016] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:52:50 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:52:50 -0400] [23678] [INFO] Worker exiting (pid: 23678)
+[2020-03-28 07:53:20 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:53:20 -0400] [25536] [INFO] Booting worker with pid: 25536
+[2020-03-28 07:53:21,579] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:53:21,582] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:53:23 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:53:23 -0400] [24048] [INFO] Worker exiting (pid: 24048)
+[2020-03-28 07:53:53 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:53:53 -0400] [25914] [INFO] Booting worker with pid: 25914
+[2020-03-28 07:53:54,064] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:53:54,068] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:53:54 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:53:54 -0400] [24426] [INFO] Worker exiting (pid: 24426)
+[2020-03-28 07:54:25 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:54:25 -0400] [26292] [INFO] Booting worker with pid: 26292
+[2020-03-28 07:54:25,913] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:54:25,915] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:54:26 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:54:26 -0400] [24792] [INFO] Worker exiting (pid: 24792)
+[2020-03-28 07:54:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:54:57 -0400] [26668] [INFO] Booting worker with pid: 26668
+[2020-03-28 07:54:57,830] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:54:57,832] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:54:58 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:54:58 -0400] [25170] [INFO] Worker exiting (pid: 25170)
+[2020-03-28 07:55:28 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:55:28 -0400] [27036] [INFO] Booting worker with pid: 27036
+[2020-03-28 07:55:29,314] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:55:29,318] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:55:29 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:55:29 -0400] [25536] [INFO] Worker exiting (pid: 25536)
+[2020-03-28 07:56:00 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:56:00 -0400] [27402] [INFO] Booting worker with pid: 27402
+[2020-03-28 07:56:00,926] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:56:00,929] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:56:01 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:56:01 -0400] [25914] [INFO] Worker exiting (pid: 25914)
+[2020-03-28 07:56:32 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:56:32 -0400] [27780] [INFO] Booting worker with pid: 27780
+[2020-03-28 07:56:32,694] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:56:32,697] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:56:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:56:33 -0400] [26292] [INFO] Worker exiting (pid: 26292)
+[2020-03-28 07:57:03 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 07:57:03 -0400] [28146] [INFO] Booting worker with pid: 28146
+[2020-03-28 07:57:04,219] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:57:04,222] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 07:57:04 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 07:57:04 -0400] [26668] [INFO] Worker exiting (pid: 26668)
+[2020-03-28 13:56:28 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:27036)
+[2020-03-28 13:56:28 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:27402)
+[2020-03-28 13:56:28 -0400] [27036] [INFO] Worker exiting (pid: 27036)
+[2020-03-28 13:56:29 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:27780)
+[2020-03-28 13:56:29 -0400] [27402] [INFO] Worker exiting (pid: 27402)
+[2020-03-28 13:56:29 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:28146)
+[2020-03-28 13:56:29 -0400] [27780] [INFO] Worker exiting (pid: 27780)
+[2020-03-28 13:56:30 -0400] [28146] [INFO] Worker exiting (pid: 28146)
+[2020-03-28 13:56:31 -0400] [28282] [INFO] Booting worker with pid: 28282
+[2020-03-28 13:56:31 -0400] [28283] [INFO] Booting worker with pid: 28283
+[2020-03-28 13:56:31 -0400] [28284] [INFO] Booting worker with pid: 28284
+[2020-03-28 13:56:31 -0400] [28285] [INFO] Booting worker with pid: 28285
+[2020-03-28 13:56:33,350] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:56:33,521] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:56:33,667] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:56:33,823] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:56:33,838] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:56:33,969] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:56:33,982] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:56:34,220] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:56:47 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 13:56:47 -0400] [28350] [INFO] Booting worker with pid: 28350
+[2020-03-28 13:56:49,089] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:56:49,126] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:56:51 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 13:56:51 -0400] [28282] [INFO] Worker exiting (pid: 28282)
+[2020-03-28 13:57:22 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 13:57:22 -0400] [28694] [INFO] Booting worker with pid: 28694
+[2020-03-28 13:57:23,896] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:23,996] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:57:25 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 13:57:25 -0400] [28283] [INFO] Worker exiting (pid: 28283)
+[2020-03-28 13:57:56 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 13:57:56 -0400] [29197] [INFO] Booting worker with pid: 29197
+[2020-03-28 13:57:56,864] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:56,869] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:57:58 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 13:57:58 -0400] [28284] [INFO] Worker exiting (pid: 28284)
+[2020-03-28 13:58:26,133] {csrf.py:251} INFO - The CSRF token has expired.
+127.0.0.1 - - [28/Mar/2020:13:58:26 -0400] "POST /admin/airflow/paused?is_paused=true&dag_id=example_passing_params_via_test_command HTTP/1.1" 400 143 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+[2020-03-28 13:58:28,211] {csrf.py:251} INFO - The CSRF token has expired.
+127.0.0.1 - - [28/Mar/2020:13:58:28 -0400] "POST /admin/airflow/paused?is_paused=true&dag_id=example_bash_operator HTTP/1.1" 400 143 "http://localhost:8585/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36 Edg/80.0.361.69"
+[2020-03-28 13:58:28 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 13:58:29 -0400] [29516] [INFO] Booting worker with pid: 29516
+[2020-03-28 13:58:30,339] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:58:30,373] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:58:32 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 13:58:32 -0400] [28285] [INFO] Worker exiting (pid: 28285)
+[2020-03-28 13:59:02 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 13:59:02 -0400] [29894] [INFO] Booting worker with pid: 29894
+[2020-03-28 13:59:03,623] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:59:03,626] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:59:04 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 13:59:04 -0400] [28350] [INFO] Worker exiting (pid: 28350)
+[2020-03-28 13:59:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 13:59:35 -0400] [30266] [INFO] Booting worker with pid: 30266
+[2020-03-28 13:59:36,211] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:59:36,220] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 13:59:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 13:59:37 -0400] [28694] [INFO] Worker exiting (pid: 28694)
+[2020-03-28 14:00:08 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:00:08 -0400] [30442] [INFO] Booting worker with pid: 30442
+[2020-03-28 14:00:09,740] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:00:09,795] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:00:11 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:00:11 -0400] [29197] [INFO] Worker exiting (pid: 29197)
+[2020-03-28 14:00:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:00:42 -0400] [30774] [INFO] Booting worker with pid: 30774
+[2020-03-28 14:00:43,680] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:00:43,772] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:00:52 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:00:53 -0400] [29516] [INFO] Worker exiting (pid: 29516)
+[2020-03-28 14:01:25 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:01:25 -0400] [30839] [INFO] Booting worker with pid: 30839
+[2020-03-28 14:01:26,237] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:01:26,295] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:01:28 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:01:28 -0400] [29894] [INFO] Worker exiting (pid: 29894)
+[2020-03-28 14:01:58 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:01:58 -0400] [31057] [INFO] Booting worker with pid: 31057
+[2020-03-28 14:01:59,677] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:01:59,729] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:02:01 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:02:01 -0400] [30266] [INFO] Worker exiting (pid: 30266)
+[2020-03-28 14:02:31 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:02:31 -0400] [31385] [INFO] Booting worker with pid: 31385
+[2020-03-28 14:02:32,388] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:02:32,400] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:02:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:02:33 -0400] [30442] [INFO] Worker exiting (pid: 30442)
+[2020-03-28 14:03:04 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:03:04 -0400] [31759] [INFO] Booting worker with pid: 31759
+[2020-03-28 14:03:04,986] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:03:04,989] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:03:06 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:03:06 -0400] [30774] [INFO] Worker exiting (pid: 30774)
+[2020-03-28 14:03:36 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:03:36 -0400] [32119] [INFO] Booting worker with pid: 32119
+[2020-03-28 14:03:37,345] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:03:37,347] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:03:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:03:37 -0400] [30839] [INFO] Worker exiting (pid: 30839)
+[2020-03-28 14:04:08 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:04:08 -0400] [32487] [INFO] Booting worker with pid: 32487
+[2020-03-28 14:04:08,839] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:04:08,842] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:04:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:04:09 -0400] [31057] [INFO] Worker exiting (pid: 31057)
+[2020-03-28 14:04:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:04:39 -0400] [102] [INFO] Booting worker with pid: 102
+[2020-03-28 14:04:40,208] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:04:40,210] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:04:40 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:04:40 -0400] [31385] [INFO] Worker exiting (pid: 31385)
+[2020-03-28 14:05:11 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:05:11 -0400] [540] [INFO] Booting worker with pid: 540
+[2020-03-28 14:05:11,744] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:05:11,751] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:05:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:05:12 -0400] [31759] [INFO] Worker exiting (pid: 31759)
+[2020-03-28 14:05:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:05:42 -0400] [906] [INFO] Booting worker with pid: 906
+[2020-03-28 14:05:43,346] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:05:43,350] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:05:43 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:05:43 -0400] [32119] [INFO] Worker exiting (pid: 32119)
+[2020-03-28 14:06:14 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:06:14 -0400] [1272] [INFO] Booting worker with pid: 1272
+[2020-03-28 14:06:14,787] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:06:14,789] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:06:15 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:06:15 -0400] [32487] [INFO] Worker exiting (pid: 32487)
+[2020-03-28 14:06:45 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:06:45 -0400] [1646] [INFO] Booting worker with pid: 1646
+[2020-03-28 14:06:46,257] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:06:46,259] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:06:46 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:06:46 -0400] [102] [INFO] Worker exiting (pid: 102)
+[2020-03-28 14:07:17 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:07:17 -0400] [2014] [INFO] Booting worker with pid: 2014
+[2020-03-28 14:07:17,843] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:07:17,845] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:07:18 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:07:18 -0400] [540] [INFO] Worker exiting (pid: 540)
+[2020-03-28 14:07:48 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:07:48 -0400] [2382] [INFO] Booting worker with pid: 2382
+[2020-03-28 14:07:49,236] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:07:49,240] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:07:49 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:07:49 -0400] [906] [INFO] Worker exiting (pid: 906)
+[2020-03-28 14:08:20 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:08:20 -0400] [2742] [INFO] Booting worker with pid: 2742
+[2020-03-28 14:08:20,854] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:08:20,857] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:08:21 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:08:21 -0400] [1272] [INFO] Worker exiting (pid: 1272)
+[2020-03-28 14:08:51 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:08:51 -0400] [3114] [INFO] Booting worker with pid: 3114
+[2020-03-28 14:08:52,360] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:08:52,362] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:08:52 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:08:52 -0400] [1646] [INFO] Worker exiting (pid: 1646)
+[2020-03-28 14:09:23 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:09:23 -0400] [3486] [INFO] Booting worker with pid: 3486
+[2020-03-28 14:09:23,826] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:09:23,828] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:09:24 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:09:24 -0400] [2014] [INFO] Worker exiting (pid: 2014)
+[2020-03-28 14:09:54 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:09:54 -0400] [3853] [INFO] Booting worker with pid: 3853
+[2020-03-28 14:09:55,327] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:09:55,330] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:09:55 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:09:55 -0400] [2382] [INFO] Worker exiting (pid: 2382)
+[2020-03-28 14:10:26 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:10:26 -0400] [4219] [INFO] Booting worker with pid: 4219
+[2020-03-28 14:10:26,920] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:10:26,923] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:10:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:10:27 -0400] [2742] [INFO] Worker exiting (pid: 2742)
+[2020-03-28 14:10:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:10:57 -0400] [4585] [INFO] Booting worker with pid: 4585
+[2020-03-28 14:10:58,430] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:10:58,433] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:10:58 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:10:58 -0400] [3114] [INFO] Worker exiting (pid: 3114)
+[2020-03-28 14:11:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:11:29 -0400] [4959] [INFO] Booting worker with pid: 4959
+[2020-03-28 14:11:29,828] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:11:29,830] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:11:30 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:11:30 -0400] [3486] [INFO] Worker exiting (pid: 3486)
+[2020-03-28 14:12:00 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:12:00 -0400] [5329] [INFO] Booting worker with pid: 5329
+[2020-03-28 14:12:01,283] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:12:01,285] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:12:01 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:12:01 -0400] [3853] [INFO] Worker exiting (pid: 3853)
+[2020-03-28 14:12:32 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:12:32 -0400] [5695] [INFO] Booting worker with pid: 5695
+[2020-03-28 14:12:32,810] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:12:32,812] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:12:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:12:33 -0400] [4219] [INFO] Worker exiting (pid: 4219)
+[2020-03-28 14:13:03 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:13:03 -0400] [6061] [INFO] Booting worker with pid: 6061
+[2020-03-28 14:13:04,417] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:13:04,419] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:13:04 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:13:04 -0400] [4585] [INFO] Worker exiting (pid: 4585)
+[2020-03-28 14:13:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:13:35 -0400] [6427] [INFO] Booting worker with pid: 6427
+[2020-03-28 14:13:35,876] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:13:35,878] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:13:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:13:36 -0400] [4959] [INFO] Worker exiting (pid: 4959)
+[2020-03-28 14:14:06 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:14:06 -0400] [6803] [INFO] Booting worker with pid: 6803
+[2020-03-28 14:14:07,300] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:14:07,302] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:14:07 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:14:07 -0400] [5329] [INFO] Worker exiting (pid: 5329)
+[2020-03-28 14:14:38 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:14:38 -0400] [7171] [INFO] Booting worker with pid: 7171
+[2020-03-28 14:14:38,783] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:14:38,785] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:14:39 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:14:39 -0400] [5695] [INFO] Worker exiting (pid: 5695)
+[2020-03-28 14:15:09 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:15:09 -0400] [7537] [INFO] Booting worker with pid: 7537
+[2020-03-28 14:15:10,455] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:15:10,458] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:15:11 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:15:11 -0400] [6061] [INFO] Worker exiting (pid: 6061)
+[2020-03-28 14:15:41 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:15:41 -0400] [7903] [INFO] Booting worker with pid: 7903
+[2020-03-28 14:15:42,012] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:15:42,014] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:15:42 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:15:42 -0400] [6427] [INFO] Worker exiting (pid: 6427)
+[2020-03-28 14:16:12 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:16:12 -0400] [8277] [INFO] Booting worker with pid: 8277
+[2020-03-28 14:16:13,413] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:16:13,415] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:16:14 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:16:14 -0400] [6803] [INFO] Worker exiting (pid: 6803)
+[2020-03-28 14:16:44 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:16:44 -0400] [8645] [INFO] Booting worker with pid: 8645
+[2020-03-28 14:16:44,890] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:16:44,892] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:16:45 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:16:45 -0400] [7171] [INFO] Worker exiting (pid: 7171)
+[2020-03-28 14:17:15 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:17:15 -0400] [9013] [INFO] Booting worker with pid: 9013
+[2020-03-28 14:17:16,459] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:17:16,461] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:17:17 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:17:17 -0400] [7537] [INFO] Worker exiting (pid: 7537)
+[2020-03-28 14:17:47 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:17:47 -0400] [9387] [INFO] Booting worker with pid: 9387
+[2020-03-28 14:17:48,405] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:17:48,407] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:17:49 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:17:49 -0400] [7903] [INFO] Worker exiting (pid: 7903)
+[2020-03-28 14:18:19 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:18:19 -0400] [9757] [INFO] Booting worker with pid: 9757
+[2020-03-28 14:18:20,355] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:18:20,357] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:18:20 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:18:20 -0400] [8277] [INFO] Worker exiting (pid: 8277)
+[2020-03-28 14:18:51 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:18:51 -0400] [10123] [INFO] Booting worker with pid: 10123
+[2020-03-28 14:18:51,874] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:18:51,876] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:18:52 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:18:52 -0400] [8645] [INFO] Worker exiting (pid: 8645)
+[2020-03-28 14:19:22 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:19:22 -0400] [10501] [INFO] Booting worker with pid: 10501
+[2020-03-28 14:19:23,353] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:19:23,356] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:19:24 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:19:24 -0400] [9013] [INFO] Worker exiting (pid: 9013)
+[2020-03-28 14:19:55 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:19:55 -0400] [10880] [INFO] Booting worker with pid: 10880
+[2020-03-28 14:19:55,890] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:19:55,893] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:19:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:19:56 -0400] [9387] [INFO] Worker exiting (pid: 9387)
+[2020-03-28 14:20:26 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:20:26 -0400] [11246] [INFO] Booting worker with pid: 11246
+[2020-03-28 14:20:27,517] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:20:27,520] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:20:28 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:20:28 -0400] [9757] [INFO] Worker exiting (pid: 9757)
+[2020-03-28 14:20:59 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:20:59 -0400] [11624] [INFO] Booting worker with pid: 11624
+[2020-03-28 14:20:59,889] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:20:59,891] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:21:00 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:21:00 -0400] [10123] [INFO] Worker exiting (pid: 10123)
+[2020-03-28 14:21:31 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:21:31 -0400] [11998] [INFO] Booting worker with pid: 11998
+[2020-03-28 14:21:31,561] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:21:31,563] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:21:32 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:21:32 -0400] [10501] [INFO] Worker exiting (pid: 10501)
+[2020-03-28 14:22:02 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:22:02 -0400] [12368] [INFO] Booting worker with pid: 12368
+[2020-03-28 14:22:03,092] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:22:03,095] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:22:04 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:22:04 -0400] [10880] [INFO] Worker exiting (pid: 10880)
+[2020-03-28 14:22:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:22:35 -0400] [12753] [INFO] Booting worker with pid: 12753
+[2020-03-28 14:22:35,908] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:22:35,910] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:22:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:22:36 -0400] [11246] [INFO] Worker exiting (pid: 11246)
+[2020-03-28 14:23:06 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:23:06 -0400] [13124] [INFO] Booting worker with pid: 13124
+[2020-03-28 14:23:07,452] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:23:07,454] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:23:08 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:23:08 -0400] [11624] [INFO] Worker exiting (pid: 11624)
+[2020-03-28 14:23:38 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:23:38 -0400] [13490] [INFO] Booting worker with pid: 13490
+[2020-03-28 14:23:39,034] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:23:39,040] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:23:40 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:23:40 -0400] [11998] [INFO] Worker exiting (pid: 11998)
+[2020-03-28 14:24:11 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:24:11 -0400] [13868] [INFO] Booting worker with pid: 13868
+[2020-03-28 14:24:11,700] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:24:11,702] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:24:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:24:12 -0400] [12368] [INFO] Worker exiting (pid: 12368)
+[2020-03-28 14:24:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:24:42 -0400] [14246] [INFO] Booting worker with pid: 14246
+[2020-03-28 14:24:43,205] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:24:43,207] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:24:43 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:24:43 -0400] [12753] [INFO] Worker exiting (pid: 12753)
+[2020-03-28 14:25:14 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:25:14 -0400] [14612] [INFO] Booting worker with pid: 14612
+[2020-03-28 14:25:14,847] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:25:14,850] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:25:15 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:25:15 -0400] [13124] [INFO] Worker exiting (pid: 13124)
+[2020-03-28 14:25:46 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:25:46 -0400] [14985] [INFO] Booting worker with pid: 14985
+[2020-03-28 14:25:46,753] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:25:46,755] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:25:47 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:25:47 -0400] [13490] [INFO] Worker exiting (pid: 13490)
+[2020-03-28 14:26:17 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:26:17 -0400] [15354] [INFO] Booting worker with pid: 15354
+[2020-03-28 14:26:18,150] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:26:18,152] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:26:18 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:26:18 -0400] [13868] [INFO] Worker exiting (pid: 13868)
+[2020-03-28 14:26:49 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:26:49 -0400] [15724] [INFO] Booting worker with pid: 15724
+[2020-03-28 14:26:49,690] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:26:49,691] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:26:51 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:26:51 -0400] [14246] [INFO] Worker exiting (pid: 14246)
+[2020-03-28 14:27:21 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:27:21 -0400] [16102] [INFO] Booting worker with pid: 16102
+[2020-03-28 14:27:22,224] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:27:22,227] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:27:22 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:27:22 -0400] [14612] [INFO] Worker exiting (pid: 14612)
+[2020-03-28 14:27:53 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:27:53 -0400] [16468] [INFO] Booting worker with pid: 16468
+[2020-03-28 14:27:53,702] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:27:53,704] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:27:54 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:27:54 -0400] [14985] [INFO] Worker exiting (pid: 14985)
+[2020-03-28 14:28:24 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:28:24 -0400] [16844] [INFO] Booting worker with pid: 16844
+[2020-03-28 14:28:25,364] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:28:25,366] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:28:26 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:28:26 -0400] [15354] [INFO] Worker exiting (pid: 15354)
+[2020-03-28 14:28:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:28:57 -0400] [17225] [INFO] Booting worker with pid: 17225
+[2020-03-28 14:28:57,801] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:28:57,803] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:28:58 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:28:58 -0400] [15724] [INFO] Worker exiting (pid: 15724)
+[2020-03-28 14:29:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:29:29 -0400] [17599] [INFO] Booting worker with pid: 17599
+[2020-03-28 14:29:29,756] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:29:29,757] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:29:30 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:29:30 -0400] [16102] [INFO] Worker exiting (pid: 16102)
+[2020-03-28 14:30:01 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:30:01 -0400] [17969] [INFO] Booting worker with pid: 17969
+[2020-03-28 14:30:01,765] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:30:01,768] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:30:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:30:02 -0400] [16468] [INFO] Worker exiting (pid: 16468)
+[2020-03-28 14:30:32 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:30:32 -0400] [18341] [INFO] Booting worker with pid: 18341
+[2020-03-28 14:30:33,229] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:30:33,231] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:30:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:30:33 -0400] [16844] [INFO] Worker exiting (pid: 16844)
+[2020-03-28 14:31:04 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:31:04 -0400] [18711] [INFO] Booting worker with pid: 18711
+[2020-03-28 14:31:04,735] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:31:04,738] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:31:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:31:05 -0400] [17225] [INFO] Worker exiting (pid: 17225)
+[2020-03-28 14:31:36 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:31:36 -0400] [19079] [INFO] Booting worker with pid: 19079
+[2020-03-28 14:31:36,747] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:31:36,749] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:31:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:31:37 -0400] [17599] [INFO] Worker exiting (pid: 17599)
+[2020-03-28 14:32:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:32:07 -0400] [19453] [INFO] Booting worker with pid: 19453
+[2020-03-28 14:32:08,244] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:32:08,247] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:32:08 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:32:08 -0400] [17969] [INFO] Worker exiting (pid: 17969)
+[2020-03-28 14:32:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 14:32:39 -0400] [19823] [INFO] Booting worker with pid: 19823
+[2020-03-28 14:32:39,822] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 14:32:39,824] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 14:32:40 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 14:32:40 -0400] [18341] [INFO] Worker exiting (pid: 18341)
+[2020-03-28 16:23:07 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:18711)
+[2020-03-28 16:23:07 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:19079)
+[2020-03-28 16:23:07 -0400] [18711] [INFO] Worker exiting (pid: 18711)
+[2020-03-28 16:23:08 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:19453)
+[2020-03-28 16:23:08 -0400] [19079] [INFO] Worker exiting (pid: 19079)
+[2020-03-28 16:23:09 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:19823)
+[2020-03-28 16:23:09 -0400] [19453] [INFO] Worker exiting (pid: 19453)
+[2020-03-28 16:23:09 -0400] [19823] [INFO] Worker exiting (pid: 19823)
+[2020-03-28 16:23:10 -0400] [20059] [INFO] Booting worker with pid: 20059
+[2020-03-28 16:23:10 -0400] [20062] [INFO] Booting worker with pid: 20062
+[2020-03-28 16:23:10 -0400] [20066] [INFO] Booting worker with pid: 20066
+[2020-03-28 16:23:11 -0400] [20072] [INFO] Booting worker with pid: 20072
+[2020-03-28 16:23:12,228] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:12,350] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:12,368] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:23:12,481] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:23:12,601] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:12,681] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:23:13,682] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:13,725] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:23:18 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:23:19 -0400] [20115] [INFO] Booting worker with pid: 20115
+[2020-03-28 16:23:20,301] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:20,320] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:23:22 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:23:22 -0400] [20059] [INFO] Worker exiting (pid: 20059)
+[2020-03-28 16:23:53 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:23:53 -0400] [20588] [INFO] Booting worker with pid: 20588
+[2020-03-28 16:23:54,024] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:54,038] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:23:55 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:23:55 -0400] [20062] [INFO] Worker exiting (pid: 20062)
+[2020-03-28 16:24:25 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:24:25 -0400] [21065] [INFO] Booting worker with pid: 21065
+[2020-03-28 16:24:26,451] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:24:26,454] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:24:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:24:27 -0400] [20066] [INFO] Worker exiting (pid: 20066)
+[2020-03-28 16:24:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:24:57 -0400] [21423] [INFO] Booting worker with pid: 21423
+[2020-03-28 16:24:59,204] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:24:59,237] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:25:00 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:25:00 -0400] [20072] [INFO] Worker exiting (pid: 20072)
+[2020-03-28 16:25:31 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:25:31 -0400] [21809] [INFO] Booting worker with pid: 21809
+[2020-03-28 16:25:31,943] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:25:31,946] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:25:32 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:25:32 -0400] [20115] [INFO] Worker exiting (pid: 20115)
+[2020-03-28 16:26:02 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:26:02 -0400] [22188] [INFO] Booting worker with pid: 22188
+[2020-03-28 16:26:03,569] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:26:03,572] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:26:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:26:05 -0400] [20588] [INFO] Worker exiting (pid: 20588)
+[2020-03-28 16:26:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:26:35 -0400] [22568] [INFO] Booting worker with pid: 22568
+[2020-03-28 16:26:36,005] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:26:36,008] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:26:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:26:36 -0400] [21065] [INFO] Worker exiting (pid: 21065)
+[2020-03-28 16:27:06 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:27:06 -0400] [22934] [INFO] Booting worker with pid: 22934
+[2020-03-28 16:27:07,501] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:27:07,504] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:27:08 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:27:08 -0400] [21423] [INFO] Worker exiting (pid: 21423)
+[2020-03-28 16:27:38 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:27:38 -0400] [23300] [INFO] Booting worker with pid: 23300
+[2020-03-28 16:27:39,024] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:27:39,029] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:27:39 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:27:39 -0400] [21809] [INFO] Worker exiting (pid: 21809)
+[2020-03-28 16:28:09 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:28:09 -0400] [23666] [INFO] Booting worker with pid: 23666
+[2020-03-28 16:28:10,762] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:28:10,768] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:28:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:28:12 -0400] [22188] [INFO] Worker exiting (pid: 22188)
+[2020-03-28 16:28:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:28:42 -0400] [24022] [INFO] Booting worker with pid: 24022
+[2020-03-28 16:28:43,626] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:28:43,634] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:28:45 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:28:45 -0400] [22568] [INFO] Worker exiting (pid: 22568)
+[2020-03-28 16:29:16 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:29:16 -0400] [24410] [INFO] Booting worker with pid: 24410
+[2020-03-28 16:29:16,971] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:29:16,976] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:29:18 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:29:18 -0400] [22934] [INFO] Worker exiting (pid: 22934)
+[2020-03-28 16:29:48 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:29:48 -0400] [24793] [INFO] Booting worker with pid: 24793
+[2020-03-28 16:29:49,520] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:29:49,523] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:29:50 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:29:50 -0400] [23300] [INFO] Worker exiting (pid: 23300)
+[2020-03-28 16:30:20 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:30:20 -0400] [25154] [INFO] Booting worker with pid: 25154
+[2020-03-28 16:30:21,090] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:30:21,095] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:30:22 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:30:22 -0400] [23666] [INFO] Worker exiting (pid: 23666)
+[2020-03-28 16:30:53 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:30:53 -0400] [25536] [INFO] Booting worker with pid: 25536
+[2020-03-28 16:30:53,664] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:30:53,672] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:30:55 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:30:55 -0400] [24022] [INFO] Worker exiting (pid: 24022)
+[2020-03-28 16:31:25 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:31:25 -0400] [25914] [INFO] Booting worker with pid: 25914
+[2020-03-28 16:31:26,113] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:31:26,118] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:31:26 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:31:26 -0400] [24410] [INFO] Worker exiting (pid: 24410)
+[2020-03-28 16:31:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:31:57 -0400] [26280] [INFO] Booting worker with pid: 26280
+[2020-03-28 16:31:57,577] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:31:57,579] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:31:58 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:31:58 -0400] [24793] [INFO] Worker exiting (pid: 24793)
+[2020-03-28 16:32:28 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:32:28 -0400] [26648] [INFO] Booting worker with pid: 26648
+[2020-03-28 16:32:29,141] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:32:29,144] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:32:29 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:32:29 -0400] [25154] [INFO] Worker exiting (pid: 25154)
+[2020-03-28 16:33:00 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:33:00 -0400] [27012] [INFO] Booting worker with pid: 27012
+[2020-03-28 16:33:00,642] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:33:00,644] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:33:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:33:02 -0400] [25536] [INFO] Worker exiting (pid: 25536)
+[2020-03-28 16:33:32 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:33:32 -0400] [27392] [INFO] Booting worker with pid: 27392
+[2020-03-28 16:33:33,313] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:33:33,318] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:33:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:33:33 -0400] [25914] [INFO] Worker exiting (pid: 25914)
+[2020-03-28 16:34:04 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:34:04 -0400] [27759] [INFO] Booting worker with pid: 27759
+[2020-03-28 16:34:04,709] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:34:04,715] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:34:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:34:05 -0400] [26280] [INFO] Worker exiting (pid: 26280)
+[2020-03-28 16:34:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:34:35 -0400] [28125] [INFO] Booting worker with pid: 28125
+[2020-03-28 16:34:36,449] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:34:36,451] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:34:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:34:37 -0400] [26648] [INFO] Worker exiting (pid: 26648)
+[2020-03-28 16:35:08 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:35:08 -0400] [28503] [INFO] Booting worker with pid: 28503
+[2020-03-28 16:35:08,803] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:35:08,806] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:35:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:35:09 -0400] [27012] [INFO] Worker exiting (pid: 27012)
+[2020-03-28 16:35:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:35:39 -0400] [28869] [INFO] Booting worker with pid: 28869
+[2020-03-28 16:35:40,328] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:35:40,330] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:35:40 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:35:40 -0400] [27392] [INFO] Worker exiting (pid: 27392)
+[2020-03-28 16:36:11 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:36:11 -0400] [29235] [INFO] Booting worker with pid: 29235
+[2020-03-28 16:36:11,984] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:36:11,986] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:36:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:36:12 -0400] [27759] [INFO] Worker exiting (pid: 27759)
+[2020-03-28 16:36:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:36:42 -0400] [29603] [INFO] Booting worker with pid: 29603
+[2020-03-28 16:36:43,436] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:36:43,439] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:36:43 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:36:43 -0400] [28125] [INFO] Worker exiting (pid: 28125)
+[2020-03-28 16:37:14 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:37:14 -0400] [29971] [INFO] Booting worker with pid: 29971
+[2020-03-28 16:37:14,792] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:37:14,795] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:37:15 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:37:15 -0400] [28503] [INFO] Worker exiting (pid: 28503)
+[2020-03-28 16:37:45 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:37:45 -0400] [30337] [INFO] Booting worker with pid: 30337
+[2020-03-28 16:37:46,443] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:37:46,445] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:37:47 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:37:47 -0400] [28869] [INFO] Worker exiting (pid: 28869)
+[2020-03-28 16:38:18 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:38:18 -0400] [30717] [INFO] Booting worker with pid: 30717
+[2020-03-28 16:38:19,157] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:38:19,162] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:38:20 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:38:20 -0400] [29235] [INFO] Worker exiting (pid: 29235)
+[2020-03-28 16:38:50 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:38:51 -0400] [31095] [INFO] Booting worker with pid: 31095
+[2020-03-28 16:38:51,657] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:38:51,661] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:38:53 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:38:53 -0400] [29603] [INFO] Worker exiting (pid: 29603)
+[2020-03-28 16:39:23 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:39:23 -0400] [31473] [INFO] Booting worker with pid: 31473
+[2020-03-28 16:39:24,132] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:39:24,135] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:39:25 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:39:25 -0400] [29971] [INFO] Worker exiting (pid: 29971)
+[2020-03-28 16:39:56 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:39:56 -0400] [31851] [INFO] Booting worker with pid: 31851
+[2020-03-28 16:39:56,765] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:39:56,776] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:39:58 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:39:58 -0400] [30337] [INFO] Worker exiting (pid: 30337)
+[2020-03-28 16:40:28 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:40:28 -0400] [32229] [INFO] Booting worker with pid: 32229
+[2020-03-28 16:40:29,293] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:40:29,296] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:40:29 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:40:29 -0400] [30717] [INFO] Worker exiting (pid: 30717)
+[2020-03-28 16:41:00 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:41:00 -0400] [32583] [INFO] Booting worker with pid: 32583
+[2020-03-28 16:41:00,851] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:41:00,854] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:41:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:41:02 -0400] [31095] [INFO] Worker exiting (pid: 31095)
+[2020-03-28 16:41:32 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:41:32 -0400] [281] [INFO] Booting worker with pid: 281
+[2020-03-28 16:41:33,375] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:41:33,378] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:41:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:41:33 -0400] [31473] [INFO] Worker exiting (pid: 31473)
+[2020-03-28 16:42:04 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:42:04 -0400] [649] [INFO] Booting worker with pid: 649
+[2020-03-28 16:42:04,830] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:42:04,832] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:42:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:42:05 -0400] [31851] [INFO] Worker exiting (pid: 31851)
+[2020-03-28 16:42:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:42:35 -0400] [1023] [INFO] Booting worker with pid: 1023
+[2020-03-28 16:42:36,454] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:42:36,457] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:42:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:42:36 -0400] [32229] [INFO] Worker exiting (pid: 32229)
+[2020-03-28 16:43:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:43:07 -0400] [1391] [INFO] Booting worker with pid: 1391
+[2020-03-28 16:43:07,834] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:43:07,836] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:43:08 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:43:08 -0400] [32583] [INFO] Worker exiting (pid: 32583)
+[2020-03-28 16:43:38 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:43:38 -0400] [1759] [INFO] Booting worker with pid: 1759
+[2020-03-28 16:43:39,352] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:43:39,354] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:43:39 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:43:39 -0400] [281] [INFO] Worker exiting (pid: 281)
+[2020-03-28 16:44:10 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:44:10 -0400] [2123] [INFO] Booting worker with pid: 2123
+[2020-03-28 16:44:11,202] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:44:11,206] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:44:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:44:12 -0400] [649] [INFO] Worker exiting (pid: 649)
+[2020-03-28 16:44:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:44:42 -0400] [2503] [INFO] Booting worker with pid: 2503
+[2020-03-28 16:44:43,408] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:44:43,410] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:44:44 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:44:44 -0400] [1023] [INFO] Worker exiting (pid: 1023)
+[2020-03-28 16:45:14 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:45:14 -0400] [2869] [INFO] Booting worker with pid: 2869
+[2020-03-28 16:45:14,905] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:45:14,910] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:45:15 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:45:15 -0400] [1391] [INFO] Worker exiting (pid: 1391)
+[2020-03-28 16:45:45 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:45:45 -0400] [3235] [INFO] Booting worker with pid: 3235
+[2020-03-28 16:45:46,589] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:45:46,592] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:45:48 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:45:48 -0400] [1759] [INFO] Worker exiting (pid: 1759)
+[2020-03-28 16:46:18 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:46:18 -0400] [3613] [INFO] Booting worker with pid: 3613
+[2020-03-28 16:46:18,947] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:46:18,950] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:46:19 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:46:19 -0400] [2123] [INFO] Worker exiting (pid: 2123)
+[2020-03-28 16:46:49 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:46:49 -0400] [3979] [INFO] Booting worker with pid: 3979
+[2020-03-28 16:46:50,453] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:46:50,454] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:46:51 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:46:51 -0400] [2503] [INFO] Worker exiting (pid: 2503)
+[2020-03-28 16:47:21 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:47:21 -0400] [4353] [INFO] Booting worker with pid: 4353
+[2020-03-28 16:47:22,066] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:47:22,070] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:47:22 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:47:22 -0400] [2869] [INFO] Worker exiting (pid: 2869)
+[2020-03-28 16:47:53 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:47:53 -0400] [4723] [INFO] Booting worker with pid: 4723
+[2020-03-28 16:47:53,607] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:47:53,612] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:47:55 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:47:55 -0400] [3235] [INFO] Worker exiting (pid: 3235)
+[2020-03-28 16:48:25 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:48:25 -0400] [5101] [INFO] Booting worker with pid: 5101
+[2020-03-28 16:48:26,211] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:48:26,215] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:48:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:48:27 -0400] [3613] [INFO] Worker exiting (pid: 3613)
+[2020-03-28 16:48:58 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:48:58 -0400] [5479] [INFO] Booting worker with pid: 5479
+[2020-03-28 16:48:58,553] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:48:58,555] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:48:59 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:48:59 -0400] [3979] [INFO] Worker exiting (pid: 3979)
+[2020-03-28 16:49:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:49:29 -0400] [5845] [INFO] Booting worker with pid: 5845
+[2020-03-28 16:49:30,193] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:49:30,196] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:49:31 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:49:31 -0400] [4353] [INFO] Worker exiting (pid: 4353)
+[2020-03-28 16:50:02 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:50:02 -0400] [6223] [INFO] Booting worker with pid: 6223
+[2020-03-28 16:50:02,610] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:50:02,614] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:50:03 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:50:03 -0400] [4723] [INFO] Worker exiting (pid: 4723)
+[2020-03-28 16:50:33 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:50:33 -0400] [6590] [INFO] Booting worker with pid: 6590
+[2020-03-28 16:50:34,125] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:50:34,127] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:50:34 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:50:34 -0400] [5101] [INFO] Worker exiting (pid: 5101)
+[2020-03-28 16:51:05 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:51:05 -0400] [6964] [INFO] Booting worker with pid: 6964
+[2020-03-28 16:51:05,665] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:51:05,667] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:51:07 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:51:07 -0400] [5479] [INFO] Worker exiting (pid: 5479)
+[2020-03-28 16:51:37 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:51:37 -0400] [7344] [INFO] Booting worker with pid: 7344
+[2020-03-28 16:51:38,262] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:51:38,264] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:51:38 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:51:38 -0400] [5845] [INFO] Worker exiting (pid: 5845)
+[2020-03-28 16:52:09 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:52:09 -0400] [7712] [INFO] Booting worker with pid: 7712
+[2020-03-28 16:52:09,737] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:52:09,740] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:52:10 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:52:10 -0400] [6223] [INFO] Worker exiting (pid: 6223)
+[2020-03-28 16:52:40 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:52:40 -0400] [8078] [INFO] Booting worker with pid: 8078
+[2020-03-28 16:52:41,264] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:52:41,267] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:52:42 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:52:42 -0400] [6590] [INFO] Worker exiting (pid: 6590)
+[2020-03-28 16:53:13 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:53:13 -0400] [8458] [INFO] Booting worker with pid: 8458
+[2020-03-28 16:53:13,960] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:53:13,962] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:53:15 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:53:15 -0400] [6964] [INFO] Worker exiting (pid: 6964)
+[2020-03-28 16:53:45 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:53:45 -0400] [8836] [INFO] Booting worker with pid: 8836
+[2020-03-28 16:53:46,451] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:53:46,454] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:53:46 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:53:46 -0400] [7344] [INFO] Worker exiting (pid: 7344)
+[2020-03-28 16:54:17 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:54:17 -0400] [9210] [INFO] Booting worker with pid: 9210
+[2020-03-28 16:54:18,016] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:54:18,020] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:54:18 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:54:18 -0400] [7712] [INFO] Worker exiting (pid: 7712)
+[2020-03-28 16:54:48 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:54:48 -0400] [9580] [INFO] Booting worker with pid: 9580
+[2020-03-28 16:54:49,509] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:54:49,511] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:54:50 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:54:50 -0400] [8078] [INFO] Worker exiting (pid: 8078)
+[2020-03-28 16:55:20 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:55:20 -0400] [9946] [INFO] Booting worker with pid: 9946
+[2020-03-28 16:55:20,953] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:55:20,955] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:55:21 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:55:21 -0400] [8458] [INFO] Worker exiting (pid: 8458)
+[2020-03-28 16:55:51 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:55:51 -0400] [10312] [INFO] Booting worker with pid: 10312
+[2020-03-28 16:55:52,569] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:55:52,572] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:55:53 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:55:53 -0400] [8836] [INFO] Worker exiting (pid: 8836)
+[2020-03-28 16:56:23 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:56:23 -0400] [10678] [INFO] Booting worker with pid: 10678
+[2020-03-28 16:56:24,218] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:56:24,221] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:56:24 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:56:24 -0400] [9210] [INFO] Worker exiting (pid: 9210)
+[2020-03-28 16:56:55 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:56:55 -0400] [11052] [INFO] Booting worker with pid: 11052
+[2020-03-28 16:56:55,825] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:56:55,827] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:56:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:56:56 -0400] [9580] [INFO] Worker exiting (pid: 9580)
+[2020-03-28 16:57:26 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:57:26 -0400] [11422] [INFO] Booting worker with pid: 11422
+[2020-03-28 16:57:27,349] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:57:27,351] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:57:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:57:27 -0400] [9946] [INFO] Worker exiting (pid: 9946)
+[2020-03-28 16:57:58 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:57:58 -0400] [11788] [INFO] Booting worker with pid: 11788
+[2020-03-28 16:57:58,801] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:57:58,804] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:57:59 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:57:59 -0400] [10312] [INFO] Worker exiting (pid: 10312)
+[2020-03-28 16:58:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:58:29 -0400] [12154] [INFO] Booting worker with pid: 12154
+[2020-03-28 16:58:30,490] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:58:30,492] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:58:30 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:58:30 -0400] [10678] [INFO] Worker exiting (pid: 10678)
+[2020-03-28 16:59:01 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:59:01 -0400] [12520] [INFO] Booting worker with pid: 12520
+[2020-03-28 16:59:02,075] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:59:02,079] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:59:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:59:02 -0400] [11052] [INFO] Worker exiting (pid: 11052)
+[2020-03-28 16:59:33 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 16:59:33 -0400] [12894] [INFO] Booting worker with pid: 12894
+[2020-03-28 16:59:34,407] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:59:34,417] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 16:59:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 16:59:36 -0400] [11422] [INFO] Worker exiting (pid: 11422)
+[2020-03-28 17:00:06 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:00:06 -0400] [13285] [INFO] Booting worker with pid: 13285
+[2020-03-28 17:00:07,401] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:00:07,403] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:00:08 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:00:08 -0400] [11788] [INFO] Worker exiting (pid: 11788)
+[2020-03-28 17:00:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:00:39 -0400] [13661] [INFO] Booting worker with pid: 13661
+[2020-03-28 17:00:39,957] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:00:39,960] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:00:40 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:00:40 -0400] [12154] [INFO] Worker exiting (pid: 12154)
+[2020-03-28 17:01:10 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:01:10 -0400] [14027] [INFO] Booting worker with pid: 14027
+[2020-03-28 17:01:11,564] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:01:11,568] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:01:13 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:01:13 -0400] [12520] [INFO] Worker exiting (pid: 12520)
+[2020-03-28 17:01:43 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:01:43 -0400] [14405] [INFO] Booting worker with pid: 14405
+[2020-03-28 17:01:44,113] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:01:44,117] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:01:45 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:01:45 -0400] [12894] [INFO] Worker exiting (pid: 12894)
+[2020-03-28 17:02:15 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:02:15 -0400] [14861] [INFO] Booting worker with pid: 14861
+[2020-03-28 17:02:16,504] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:02:16,507] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:02:18 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:02:18 -0400] [13285] [INFO] Worker exiting (pid: 13285)
+[2020-03-28 17:02:48 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:02:48 -0400] [15239] [INFO] Booting worker with pid: 15239
+[2020-03-28 17:02:49,057] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:02:49,060] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:02:50 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:02:50 -0400] [13661] [INFO] Worker exiting (pid: 13661)
+[2020-03-28 17:03:21 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:03:21 -0400] [15617] [INFO] Booting worker with pid: 15617
+[2020-03-28 17:03:21,669] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:03:21,674] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:03:23 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:03:23 -0400] [14027] [INFO] Worker exiting (pid: 14027)
+[2020-03-28 17:03:53 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:03:53 -0400] [15995] [INFO] Booting worker with pid: 15995
+[2020-03-28 17:03:54,393] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:03:54,396] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:03:54 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:03:54 -0400] [14405] [INFO] Worker exiting (pid: 14405)
+[2020-03-28 17:04:25 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:04:25 -0400] [16361] [INFO] Booting worker with pid: 16361
+[2020-03-28 17:04:26,054] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:04:26,058] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:04:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:04:27 -0400] [14861] [INFO] Worker exiting (pid: 14861)
+[2020-03-28 17:04:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:04:57 -0400] [16739] [INFO] Booting worker with pid: 16739
+[2020-03-28 17:04:58,582] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:04:58,585] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:05:00 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:05:00 -0400] [15239] [INFO] Worker exiting (pid: 15239)
+[2020-03-28 17:05:30 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:05:30 -0400] [17125] [INFO] Booting worker with pid: 17125
+[2020-03-28 17:05:31,117] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:05:31,119] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:05:32 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:05:32 -0400] [15617] [INFO] Worker exiting (pid: 15617)
+[2020-03-28 17:06:03 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:06:03 -0400] [17507] [INFO] Booting worker with pid: 17507
+[2020-03-28 17:06:03,645] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:06:03,647] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:06:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:06:05 -0400] [15995] [INFO] Worker exiting (pid: 15995)
+[2020-03-28 17:06:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:06:35 -0400] [17886] [INFO] Booting worker with pid: 17886
+[2020-03-28 17:06:36,102] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:06:36,103] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:06:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:06:36 -0400] [16361] [INFO] Worker exiting (pid: 16361)
+[2020-03-28 17:07:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:07:07 -0400] [18252] [INFO] Booting worker with pid: 18252
+[2020-03-28 17:07:07,732] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:07:07,735] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:07:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:07:09 -0400] [16739] [INFO] Worker exiting (pid: 16739)
+[2020-03-28 17:07:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:07:39 -0400] [18630] [INFO] Booting worker with pid: 18630
+[2020-03-28 17:07:40,249] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:07:40,252] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:07:41 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:07:41 -0400] [17125] [INFO] Worker exiting (pid: 17125)
+[2020-03-28 17:08:12 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:08:12 -0400] [19008] [INFO] Booting worker with pid: 19008
+[2020-03-28 17:08:13,025] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:08:13,029] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:08:14 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:08:14 -0400] [17507] [INFO] Worker exiting (pid: 17507)
+[2020-03-28 17:08:44 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:08:44 -0400] [19386] [INFO] Booting worker with pid: 19386
+[2020-03-28 17:08:45,554] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:08:45,558] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:08:47 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:08:47 -0400] [17886] [INFO] Worker exiting (pid: 17886)
+[2020-03-28 17:09:17 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:09:17 -0400] [19766] [INFO] Booting worker with pid: 19766
+[2020-03-28 17:09:18,174] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:09:18,177] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:09:19 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:09:19 -0400] [18252] [INFO] Worker exiting (pid: 18252)
+[2020-03-28 17:09:50 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:09:50 -0400] [20152] [INFO] Booting worker with pid: 20152
+[2020-03-28 17:09:50,762] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:09:50,764] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:09:52 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:09:52 -0400] [18630] [INFO] Worker exiting (pid: 18630)
+[2020-03-28 17:10:22 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:10:22 -0400] [20526] [INFO] Booting worker with pid: 20526
+[2020-03-28 17:10:23,312] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:10:23,315] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:10:24 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:10:24 -0400] [19008] [INFO] Worker exiting (pid: 19008)
+[2020-03-28 17:10:55 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:10:55 -0400] [20905] [INFO] Booting worker with pid: 20905
+[2020-03-28 17:10:55,737] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:10:55,739] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:10:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:10:56 -0400] [19386] [INFO] Worker exiting (pid: 19386)
+[2020-03-28 17:11:26 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:11:26 -0400] [21272] [INFO] Booting worker with pid: 21272
+[2020-03-28 17:11:27,194] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:11:27,196] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:11:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:11:27 -0400] [19766] [INFO] Worker exiting (pid: 19766)
+[2020-03-28 17:11:58 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:11:58 -0400] [21640] [INFO] Booting worker with pid: 21640
+[2020-03-28 17:11:58,633] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:11:58,635] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:11:59 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:11:59 -0400] [20152] [INFO] Worker exiting (pid: 20152)
+[2020-03-28 17:12:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:12:29 -0400] [22010] [INFO] Booting worker with pid: 22010
+[2020-03-28 17:12:30,198] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:12:30,201] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:12:30 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:12:30 -0400] [20526] [INFO] Worker exiting (pid: 20526)
+[2020-03-28 17:13:01 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:13:01 -0400] [22376] [INFO] Booting worker with pid: 22376
+[2020-03-28 17:13:01,602] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:13:01,605] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:13:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:13:02 -0400] [20905] [INFO] Worker exiting (pid: 20905)
+[2020-03-28 17:13:32 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:13:32 -0400] [22742] [INFO] Booting worker with pid: 22742
+[2020-03-28 17:13:33,275] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:13:33,281] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:13:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:13:33 -0400] [21272] [INFO] Worker exiting (pid: 21272)
+[2020-03-28 17:14:04 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:14:04 -0400] [23109] [INFO] Booting worker with pid: 23109
+[2020-03-28 17:14:04,654] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:14:04,656] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:14:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:14:05 -0400] [21640] [INFO] Worker exiting (pid: 21640)
+[2020-03-28 17:14:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:14:35 -0400] [23475] [INFO] Booting worker with pid: 23475
+[2020-03-28 17:14:36,240] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:14:36,243] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:14:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:14:36 -0400] [22010] [INFO] Worker exiting (pid: 22010)
+[2020-03-28 17:15:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:15:07 -0400] [23851] [INFO] Booting worker with pid: 23851
+[2020-03-28 17:15:07,635] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:15:07,637] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:15:08 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:15:08 -0400] [22376] [INFO] Worker exiting (pid: 22376)
+[2020-03-28 17:15:38 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:15:38 -0400] [24219] [INFO] Booting worker with pid: 24219
+[2020-03-28 17:15:39,163] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:15:39,165] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:15:39 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:15:39 -0400] [22742] [INFO] Worker exiting (pid: 22742)
+[2020-03-28 17:16:10 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:16:10 -0400] [24585] [INFO] Booting worker with pid: 24585
+[2020-03-28 17:16:10,675] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:16:10,683] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:16:11 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:16:11 -0400] [23109] [INFO] Worker exiting (pid: 23109)
+[2020-03-28 17:16:41 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:16:41 -0400] [24951] [INFO] Booting worker with pid: 24951
+[2020-03-28 17:16:42,312] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:16:42,314] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:16:43 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:16:43 -0400] [23475] [INFO] Worker exiting (pid: 23475)
+[2020-03-28 17:17:14 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:17:14 -0400] [25329] [INFO] Booting worker with pid: 25329
+[2020-03-28 17:17:14,958] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:17:14,961] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:17:16 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:17:16 -0400] [23851] [INFO] Worker exiting (pid: 23851)
+[2020-03-28 17:17:46 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:17:46 -0400] [25707] [INFO] Booting worker with pid: 25707
+[2020-03-28 17:17:47,328] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:17:47,330] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:17:47 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:17:47 -0400] [24219] [INFO] Worker exiting (pid: 24219)
+[2020-03-28 17:18:18 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:18:18 -0400] [26080] [INFO] Booting worker with pid: 26080
+[2020-03-28 17:18:18,957] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:18:18,960] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:18:19 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:18:19 -0400] [24585] [INFO] Worker exiting (pid: 24585)
+[2020-03-28 17:18:49 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:18:49 -0400] [26451] [INFO] Booting worker with pid: 26451
+[2020-03-28 17:18:50,733] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:18:50,761] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:18:52 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:18:52 -0400] [24951] [INFO] Worker exiting (pid: 24951)
+[2020-03-28 17:19:22 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:19:22 -0400] [26829] [INFO] Booting worker with pid: 26829
+[2020-03-28 17:19:23,082] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:19:23,104] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:19:24 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:19:24 -0400] [25329] [INFO] Worker exiting (pid: 25329)
+[2020-03-28 17:19:54 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:19:54 -0400] [27207] [INFO] Booting worker with pid: 27207
+[2020-03-28 17:19:55,513] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:19:55,518] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:19:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:19:56 -0400] [25707] [INFO] Worker exiting (pid: 25707)
+[2020-03-28 17:20:26 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:20:26 -0400] [27573] [INFO] Booting worker with pid: 27573
+[2020-03-28 17:20:27,023] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:20:27,025] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:20:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:20:27 -0400] [26080] [INFO] Worker exiting (pid: 26080)
+[2020-03-28 17:20:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:20:57 -0400] [27939] [INFO] Booting worker with pid: 27939
+[2020-03-28 17:20:58,539] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:20:58,541] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:20:59 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:20:59 -0400] [26451] [INFO] Worker exiting (pid: 26451)
+[2020-03-28 17:21:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:21:29 -0400] [28317] [INFO] Booting worker with pid: 28317
+[2020-03-28 17:21:30,029] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:21:30,032] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:21:30 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:21:30 -0400] [26829] [INFO] Worker exiting (pid: 26829)
+[2020-03-28 17:22:00 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:22:00 -0400] [28683] [INFO] Booting worker with pid: 28683
+[2020-03-28 17:22:01,484] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:22:01,486] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:22:02 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:22:02 -0400] [27207] [INFO] Worker exiting (pid: 27207)
+[2020-03-28 17:22:32 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:22:32 -0400] [29049] [INFO] Booting worker with pid: 29049
+[2020-03-28 17:22:32,992] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:22:32,997] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:22:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:22:33 -0400] [27573] [INFO] Worker exiting (pid: 27573)
+[2020-03-28 17:23:03 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:23:03 -0400] [29415] [INFO] Booting worker with pid: 29415
+[2020-03-28 17:23:04,564] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:23:04,566] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:23:05 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:23:05 -0400] [27939] [INFO] Worker exiting (pid: 27939)
+[2020-03-28 17:23:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:23:35 -0400] [29784] [INFO] Booting worker with pid: 29784
+[2020-03-28 17:23:35,985] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:23:35,987] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:23:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:23:36 -0400] [28317] [INFO] Worker exiting (pid: 28317)
+[2020-03-28 17:24:06 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:24:06 -0400] [30157] [INFO] Booting worker with pid: 30157
+[2020-03-28 17:24:07,559] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:24:07,562] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:24:08 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:24:08 -0400] [28683] [INFO] Worker exiting (pid: 28683)
+[2020-03-28 17:24:38 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:24:38 -0400] [30524] [INFO] Booting worker with pid: 30524
+[2020-03-28 17:24:39,052] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:24:39,055] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:24:39 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:24:39 -0400] [29049] [INFO] Worker exiting (pid: 29049)
+[2020-03-28 17:25:10 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:25:10 -0400] [30894] [INFO] Booting worker with pid: 30894
+[2020-03-28 17:25:10,568] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:25:10,570] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:25:11 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:25:11 -0400] [29415] [INFO] Worker exiting (pid: 29415)
+[2020-03-28 17:25:41 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:25:41 -0400] [31260] [INFO] Booting worker with pid: 31260
+[2020-03-28 17:25:42,296] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:25:42,299] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:25:42 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:25:42 -0400] [29784] [INFO] Worker exiting (pid: 29784)
+[2020-03-28 17:26:13 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:26:13 -0400] [31633] [INFO] Booting worker with pid: 31633
+[2020-03-28 17:26:13,875] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:26:13,877] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:26:14 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:26:14 -0400] [30157] [INFO] Worker exiting (pid: 30157)
+[2020-03-28 17:26:44 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:26:44 -0400] [32002] [INFO] Booting worker with pid: 32002
+[2020-03-28 17:26:45,320] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:26:45,323] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:26:45 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:26:45 -0400] [30524] [INFO] Worker exiting (pid: 30524)
+[2020-03-28 17:27:16 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:27:16 -0400] [32370] [INFO] Booting worker with pid: 32370
+[2020-03-28 17:27:16,878] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:27:16,880] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:27:17 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:27:17 -0400] [30894] [INFO] Worker exiting (pid: 30894)
+[2020-03-28 17:27:47 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:27:47 -0400] [32736] [INFO] Booting worker with pid: 32736
+[2020-03-28 17:27:48,463] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:27:48,466] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:27:49 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:27:49 -0400] [31260] [INFO] Worker exiting (pid: 31260)
+[2020-03-28 17:28:19 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:28:19 -0400] [423] [INFO] Booting worker with pid: 423
+[2020-03-28 17:28:19,948] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:28:19,951] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:28:20 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:28:20 -0400] [31633] [INFO] Worker exiting (pid: 31633)
+[2020-03-28 17:28:50 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:28:50 -0400] [789] [INFO] Booting worker with pid: 789
+[2020-03-28 17:28:51,468] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:28:51,471] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:28:52 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:28:52 -0400] [32002] [INFO] Worker exiting (pid: 32002)
+[2020-03-28 17:29:22 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:29:22 -0400] [1161] [INFO] Booting worker with pid: 1161
+[2020-03-28 17:29:22,900] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:29:22,902] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:29:23 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:29:23 -0400] [32370] [INFO] Worker exiting (pid: 32370)
+[2020-03-28 17:29:53 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:29:53 -0400] [1531] [INFO] Booting worker with pid: 1531
+[2020-03-28 17:29:54,373] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:29:54,375] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:29:55 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:29:55 -0400] [32736] [INFO] Worker exiting (pid: 32736)
+[2020-03-28 17:30:25 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:30:25 -0400] [1899] [INFO] Booting worker with pid: 1899
+[2020-03-28 17:30:25,855] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:30:25,858] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:30:26 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:30:26 -0400] [423] [INFO] Worker exiting (pid: 423)
+[2020-03-28 17:30:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:30:57 -0400] [2265] [INFO] Booting worker with pid: 2265
+[2020-03-28 17:30:57,802] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:30:57,804] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:30:58 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:30:58 -0400] [789] [INFO] Worker exiting (pid: 789)
+[2020-03-28 17:31:28 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:31:28 -0400] [2631] [INFO] Booting worker with pid: 2631
+[2020-03-28 17:31:29,195] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:31:29,198] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:31:29 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:31:29 -0400] [1161] [INFO] Worker exiting (pid: 1161)
+[2020-03-28 17:32:00 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:32:00 -0400] [3001] [INFO] Booting worker with pid: 3001
+[2020-03-28 17:32:00,662] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:32:00,664] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:32:01 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:32:01 -0400] [1531] [INFO] Worker exiting (pid: 1531)
+[2020-03-28 17:32:31 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:32:31 -0400] [3375] [INFO] Booting worker with pid: 3375
+[2020-03-28 17:32:32,356] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:32:32,358] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:32:32 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:32:32 -0400] [1899] [INFO] Worker exiting (pid: 1899)
+[2020-03-28 17:33:03 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:33:03 -0400] [3741] [INFO] Booting worker with pid: 3741
+[2020-03-28 17:33:04,014] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:33:04,016] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:33:04 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:33:04 -0400] [2265] [INFO] Worker exiting (pid: 2265)
+[2020-03-28 17:33:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:33:35 -0400] [4116] [INFO] Booting worker with pid: 4116
+[2020-03-28 17:33:35,846] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:33:35,849] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:33:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:33:37 -0400] [2631] [INFO] Worker exiting (pid: 2631)
+[2020-03-28 17:34:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:34:07 -0400] [4498] [INFO] Booting worker with pid: 4498
+[2020-03-28 17:34:08,261] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:34:08,263] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:34:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:34:09 -0400] [3001] [INFO] Worker exiting (pid: 3001)
+[2020-03-28 17:34:40 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:34:40 -0400] [4876] [INFO] Booting worker with pid: 4876
+[2020-03-28 17:34:40,829] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:34:40,832] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:34:41 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:34:41 -0400] [3375] [INFO] Worker exiting (pid: 3375)
+[2020-03-28 17:35:11 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:35:11 -0400] [5242] [INFO] Booting worker with pid: 5242
+[2020-03-28 17:35:12,345] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:35:12,347] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:35:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:35:12 -0400] [3741] [INFO] Worker exiting (pid: 3741)
+[2020-03-28 17:35:43 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:35:43 -0400] [5620] [INFO] Booting worker with pid: 5620
+[2020-03-28 17:35:44,156] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:35:44,158] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:35:45 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:35:45 -0400] [4116] [INFO] Worker exiting (pid: 4116)
+[2020-03-28 17:36:16 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:36:16 -0400] [5998] [INFO] Booting worker with pid: 5998
+[2020-03-28 17:36:16,687] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:36:16,691] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:36:17 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:36:17 -0400] [4498] [INFO] Worker exiting (pid: 4498)
+[2020-03-28 17:36:47 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:36:47 -0400] [6364] [INFO] Booting worker with pid: 6364
+[2020-03-28 17:36:48,361] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:36:48,363] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:36:48 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:36:48 -0400] [4876] [INFO] Worker exiting (pid: 4876)
+[2020-03-28 17:37:19 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:37:19 -0400] [6734] [INFO] Booting worker with pid: 6734
+[2020-03-28 17:37:19,885] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:37:19,887] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:37:20 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:37:20 -0400] [5242] [INFO] Worker exiting (pid: 5242)
+[2020-03-28 17:37:50 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:37:50 -0400] [7108] [INFO] Booting worker with pid: 7108
+[2020-03-28 17:37:51,930] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:37:51,932] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:37:53 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:37:53 -0400] [5620] [INFO] Worker exiting (pid: 5620)
+[2020-03-28 17:38:23 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:38:23 -0400] [7486] [INFO] Booting worker with pid: 7486
+[2020-03-28 17:38:24,447] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:38:24,450] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:38:24 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:38:24 -0400] [5998] [INFO] Worker exiting (pid: 5998)
+[2020-03-28 17:38:55 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:38:55 -0400] [7857] [INFO] Booting worker with pid: 7857
+[2020-03-28 17:38:55,907] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:38:55,909] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:38:56 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:38:56 -0400] [6364] [INFO] Worker exiting (pid: 6364)
+[2020-03-28 17:39:27 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:39:27 -0400] [8230] [INFO] Booting worker with pid: 8230
+[2020-03-28 17:39:27,656] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:39:27,659] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:39:28 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:39:28 -0400] [6734] [INFO] Worker exiting (pid: 6734)
+[2020-03-28 17:39:59 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:39:59 -0400] [8604] [INFO] Booting worker with pid: 8604
+[2020-03-28 17:39:59,582] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:39:59,584] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:40:00 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:40:00 -0400] [7108] [INFO] Worker exiting (pid: 7108)
+[2020-03-28 17:40:31 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:40:31 -0400] [8974] [INFO] Booting worker with pid: 8974
+[2020-03-28 17:40:31,634] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:40:31,637] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:40:33 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:40:33 -0400] [7486] [INFO] Worker exiting (pid: 7486)
+[2020-03-28 17:41:03 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:41:03 -0400] [9352] [INFO] Booting worker with pid: 9352
+[2020-03-28 17:41:04,114] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:41:04,116] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:41:04 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:41:04 -0400] [7857] [INFO] Worker exiting (pid: 7857)
+[2020-03-28 17:41:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:41:35 -0400] [9727] [INFO] Booting worker with pid: 9727
+[2020-03-28 17:41:35,801] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:41:35,804] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:41:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:41:37 -0400] [8230] [INFO] Worker exiting (pid: 8230)
+[2020-03-28 17:42:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:42:07 -0400] [10109] [INFO] Booting worker with pid: 10109
+[2020-03-28 17:42:08,273] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:42:08,276] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:42:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:42:09 -0400] [8604] [INFO] Worker exiting (pid: 8604)
+[2020-03-28 17:42:40 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:42:40 -0400] [10487] [INFO] Booting worker with pid: 10487
+[2020-03-28 17:42:41,245] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:42:41,247] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:42:42 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:42:42 -0400] [8974] [INFO] Worker exiting (pid: 8974)
+[2020-03-28 17:43:13 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:43:13 -0400] [10875] [INFO] Booting worker with pid: 10875
+[2020-03-28 17:43:13,648] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:43:13,650] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:43:15 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:43:15 -0400] [9352] [INFO] Worker exiting (pid: 9352)
+[2020-03-28 17:43:45 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:43:45 -0400] [11255] [INFO] Booting worker with pid: 11255
+[2020-03-28 17:43:46,141] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:43:46,143] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:43:46 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:43:46 -0400] [9727] [INFO] Worker exiting (pid: 9727)
+[2020-03-28 17:44:17 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:44:17 -0400] [11621] [INFO] Booting worker with pid: 11621
+[2020-03-28 17:44:17,915] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:44:17,918] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:44:19 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:44:19 -0400] [10109] [INFO] Worker exiting (pid: 10109)
+[2020-03-28 17:44:49 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:44:49 -0400] [11999] [INFO] Booting worker with pid: 11999
+[2020-03-28 17:44:50,281] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:44:50,283] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:44:51 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:44:51 -0400] [10487] [INFO] Worker exiting (pid: 10487)
+[2020-03-28 17:45:22 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:45:22 -0400] [12377] [INFO] Booting worker with pid: 12377
+[2020-03-28 17:45:22,765] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:45:22,767] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:45:23 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:45:23 -0400] [10875] [INFO] Worker exiting (pid: 10875)
+[2020-03-28 17:45:53 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:45:53 -0400] [12750] [INFO] Booting worker with pid: 12750
+[2020-03-28 17:45:54,301] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:45:54,303] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:45:54 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:45:54 -0400] [11255] [INFO] Worker exiting (pid: 11255)
+[2020-03-28 17:46:25 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:46:25 -0400] [13115] [INFO] Booting worker with pid: 13115
+[2020-03-28 17:46:25,720] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:46:25,722] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:46:27 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:46:27 -0400] [11621] [INFO] Worker exiting (pid: 11621)
+[2020-03-28 17:46:57 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:46:57 -0400] [13493] [INFO] Booting worker with pid: 13493
+[2020-03-28 17:46:58,353] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:46:58,359] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:46:58 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:46:58 -0400] [11999] [INFO] Worker exiting (pid: 11999)
+[2020-03-28 17:47:29 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:47:29 -0400] [13859] [INFO] Booting worker with pid: 13859
+[2020-03-28 17:47:29,780] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:47:29,783] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:47:31 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:47:31 -0400] [12377] [INFO] Worker exiting (pid: 12377)
+[2020-03-28 17:48:01 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:48:01 -0400] [14237] [INFO] Booting worker with pid: 14237
+[2020-03-28 17:48:02,340] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:48:02,342] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:48:03 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:48:03 -0400] [12750] [INFO] Worker exiting (pid: 12750)
+[2020-03-28 17:48:34 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:48:34 -0400] [14615] [INFO] Booting worker with pid: 14615
+[2020-03-28 17:48:34,981] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:48:34,990] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:48:36 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:48:36 -0400] [13115] [INFO] Worker exiting (pid: 13115)
+[2020-03-28 17:49:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:49:07 -0400] [15002] [INFO] Booting worker with pid: 15002
+[2020-03-28 17:49:08,033] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:49:08,037] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:49:09 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:49:09 -0400] [13493] [INFO] Worker exiting (pid: 13493)
+[2020-03-28 17:49:39 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:49:39 -0400] [15381] [INFO] Booting worker with pid: 15381
+[2020-03-28 17:49:40,434] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:49:40,439] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:49:40 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:49:40 -0400] [13859] [INFO] Worker exiting (pid: 13859)
+[2020-03-28 17:50:11 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:50:11 -0400] [15749] [INFO] Booting worker with pid: 15749
+[2020-03-28 17:50:12,244] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:50:12,247] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:50:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:50:12 -0400] [14237] [INFO] Worker exiting (pid: 14237)
+[2020-03-28 17:50:43 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 17:50:43 -0400] [16125] [INFO] Booting worker with pid: 16125
+[2020-03-28 17:50:43,906] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 17:50:43,908] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 17:50:45 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 17:50:45 -0400] [14615] [INFO] Worker exiting (pid: 14615)
+[2020-03-28 21:37:56 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:15002)
+[2020-03-28 21:37:56 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:15381)
+[2020-03-28 21:37:56 -0400] [15002] [INFO] Worker exiting (pid: 15002)
+[2020-03-28 21:37:56 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:15749)
+[2020-03-28 21:37:56 -0400] [15381] [INFO] Worker exiting (pid: 15381)
+[2020-03-28 21:37:58 -0400] [283] [CRITICAL] WORKER TIMEOUT (pid:16125)
+[2020-03-28 21:37:58 -0400] [15749] [INFO] Worker exiting (pid: 15749)
+[2020-03-28 21:37:58 -0400] [16125] [INFO] Worker exiting (pid: 16125)
+[2020-03-28 21:37:59 -0400] [16427] [INFO] Booting worker with pid: 16427
+[2020-03-28 21:37:59 -0400] [16428] [INFO] Booting worker with pid: 16428
+[2020-03-28 21:37:59 -0400] [16429] [INFO] Booting worker with pid: 16429
+[2020-03-28 21:37:59 -0400] [16430] [INFO] Booting worker with pid: 16430
+[2020-03-28 21:38:01,419] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:01,513] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:01,587] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:38:01,684] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:01,814] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:38:01,968] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:02,270] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:38:02,554] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:38:03 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:38:04 -0400] [16447] [INFO] Booting worker with pid: 16447
+[2020-03-28 21:38:05,539] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:05,671] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:38:07 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:38:07 -0400] [16427] [INFO] Worker exiting (pid: 16427)
+[2020-03-28 21:38:38 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:38:38 -0400] [16691] [INFO] Booting worker with pid: 16691
+[2020-03-28 21:38:40,515] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:40,679] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:38:45 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:38:45 -0400] [16428] [INFO] Worker exiting (pid: 16428)
+[2020-03-28 21:39:16 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:39:16 -0400] [17177] [INFO] Booting worker with pid: 17177
+[2020-03-28 21:39:18,231] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:18,365] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:39:21 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:39:21 -0400] [16429] [INFO] Worker exiting (pid: 16429)
+[2020-03-28 21:39:52 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:39:52 -0400] [17561] [INFO] Booting worker with pid: 17561
+[2020-03-28 21:39:54,210] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:54,319] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:39:57 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:39:57 -0400] [16430] [INFO] Worker exiting (pid: 16430)
+[2020-03-28 21:40:28 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:40:28 -0400] [18004] [INFO] Booting worker with pid: 18004
+[2020-03-28 21:40:29,780] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:40:29,783] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:40:31 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:40:31 -0400] [16447] [INFO] Worker exiting (pid: 16447)
+[2020-03-28 21:41:01 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:41:01 -0400] [18400] [INFO] Booting worker with pid: 18400
+[2020-03-28 21:41:02,957] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:41:02,967] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:41:04 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:41:04 -0400] [16691] [INFO] Worker exiting (pid: 16691)
+[2020-03-28 21:41:35 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:41:35 -0400] [18775] [INFO] Booting worker with pid: 18775
+[2020-03-28 21:41:36,109] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:41:36,112] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:41:37 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:41:37 -0400] [17177] [INFO] Worker exiting (pid: 17177)
+[2020-03-28 21:42:07 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:42:08 -0400] [19135] [INFO] Booting worker with pid: 19135
+[2020-03-28 21:42:10,583] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:42:10,589] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:42:12 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:42:12 -0400] [17561] [INFO] Worker exiting (pid: 17561)
+[2020-03-28 21:42:42 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:42:42 -0400] [19531] [INFO] Booting worker with pid: 19531
+[2020-03-28 21:42:43,456] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:42:43,459] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:42:44 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:42:44 -0400] [18004] [INFO] Worker exiting (pid: 18004)
+[2020-03-28 21:43:15 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:43:15 -0400] [19909] [INFO] Booting worker with pid: 19909
+[2020-03-28 21:43:16,202] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:43:16,209] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:43:17 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:43:17 -0400] [18400] [INFO] Worker exiting (pid: 18400)
+[2020-03-28 21:43:47 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:43:48 -0400] [20281] [INFO] Booting worker with pid: 20281
+[2020-03-28 21:43:48,830] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:43:48,840] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+[2020-03-28 21:43:50 -0400] [283] [INFO] Handling signal: ttou
+[2020-03-28 21:43:50 -0400] [18775] [INFO] Worker exiting (pid: 18775)
+[2020-03-28 21:44:20 -0400] [283] [INFO] Handling signal: ttin
+[2020-03-28 21:44:20 -0400] [20589] [INFO] Booting worker with pid: 20589
+[2020-03-28 21:44:21,350] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:44:21,354] {dagbag.py:92} INFO - Filling up the DagBag from /c/Users/jdearce/airflow/dags
+^C[2020-03-28 21:44:22 -0400] [283] [INFO] Handling signal: int
+[2020-03-28 21:44:22 -0400] [19909] [INFO] Worker exiting (pid: 19909)
+[2020-03-28 21:44:22 -0400] [19135] [INFO] Worker exiting (pid: 19135)
+[2020-03-28 21:44:22 -0400] [20589] [INFO] Worker exiting (pid: 20589)
+[2020-03-28 21:44:22 -0400] [20281] [INFO] Worker exiting (pid: 20281)
+[2020-03-28 21:44:22 -0400] [19531] [INFO] Worker exiting (pid: 19531)
+[2020-03-28 21:44:23 -0400] [283] [INFO] Shutting down: Master
+jdearce@LAPTOP-I43LI54D:~$

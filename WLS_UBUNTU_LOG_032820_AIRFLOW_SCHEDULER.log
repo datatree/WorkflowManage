@@ -1,0 +1,818 @@
+jdearce@LAPTOP-I43LI54D:~$ airflow scheduler
+
+[2020-03-28 07:17:34,976] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=117
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2020-03-28 07:17:44,684] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:17:45,126] {scheduler_job.py:1320} INFO - Starting the scheduler
+[2020-03-28 07:17:45,127] {scheduler_job.py:1328} INFO - Running execute loop for -1 seconds
+[2020-03-28 07:17:45,128] {scheduler_job.py:1329} INFO - Processing each file at most -1 times
+[2020-03-28 07:17:45,128] {scheduler_job.py:1332} INFO - Searching for files in /c/Users/jdearce/airflow/dags
+[2020-03-28 07:17:45,526] {scheduler_job.py:1334} INFO - There are 20 files in /c/Users/jdearce/airflow/dags
+[2020-03-28 07:17:46,199] {scheduler_job.py:1382} INFO - Resetting orphaned tasks for active dag runs
+[2020-03-28 07:17:47,575] {dag_processing.py:556} INFO - Launched DagFileProcessorManager with pid: 270
+[2020-03-28 07:17:47,591] {settings.py:54} INFO - Configured default timezone <Timezone [UTC]>
+[2020-03-28 07:17:47,610] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=270
+[2020-03-28 07:17:51,722] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 07:17:51,771] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 2 task instances ready to be queued
+[2020-03-28 07:17:51,776] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 07:17:51,785] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 07:17:51,848] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 07:17:52,089] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 07:17:52,136] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 07:17:52,144] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:17:52,153] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-28 07:17:52,157] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:17:52,173] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:17:52,186] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:17:53,833] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=342
+[2020-03-28 07:17:53,850] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=341
+[2020-03-28 07:17:55,448] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:17:55,448] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:17:55,451] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 07:17:55,452] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 07:17:55,602] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:17:55,631] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:17:57,677] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.latest_only 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 07:17:57,697] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 1 task instances ready to be queued
+[2020-03-28 07:17:57,700] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 07:17:57,721] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 07:17:57,766] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 07:17:57,770] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 07:17:57,772] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 07:17:57,779] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 07:17:59,738] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=443
+[2020-03-28 07:18:01,230] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:01,255] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 07:18:01,471] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:18:03,655] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:03,668] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 2 task instances ready to be queued
+[2020-03-28 07:18:03,670] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 07:18:03,672] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 07:18:03,691] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:03,734] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 04:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 04:00:00+00:00 [queued]>
+[2020-03-28 07:18:03,736] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 28, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 07:18:03,737] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:03,738] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 28, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-28 07:18:03,741] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:03,746] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:03,749] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:05,405] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=597
+[2020-03-28 07:18:05,480] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=598
+[2020-03-28 07:18:07,008] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:07,009] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 07:18:07,044] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:07,046] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 07:18:07,206] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-28T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:18:07,216] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:18:07,665] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.latest_only 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:07,686] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 1 task instances ready to be queued
+[2020-03-28 07:18:07,693] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 07:18:07,712] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:07,772] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 04:00:00+00:00 [queued]>
+[2020-03-28 07:18:07,783] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 28, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 07:18:07,786] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 07:18:07,791] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 07:18:09,691] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=691
+[2020-03-28 07:18:11,214] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:11,217] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 07:18:11,360] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-28T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:18:13,664] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:13,676] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-03-28 07:18:13,679] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 07:18:13,698] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:13,731] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 04:00:00+00:00 [queued]>
+[2020-03-28 07:18:13,733] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task1', datetime.datetime(2020, 3, 28, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 07:18:13,734] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task1', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:13,739] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task2 execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:13,739] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task1', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:13,747] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.latest_only execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:15,566] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=814
+[2020-03-28 07:18:16,684] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:16,685] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 07:18:16,793] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task1 2020-03-28T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:18:17,769] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.task1 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:17,799] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-03-28 07:18:17,804] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 07:18:17,831] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.task1 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:17,869] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.task1 2020-03-28 04:00:00+00:00 [queued]>
+[2020-03-28 07:18:17,872] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'task1', datetime.datetime(2020, 3, 28, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 07:18:17,874] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'task1', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 07:18:17,881] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'task1', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 07:18:17,887] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.latest_only execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:19,534] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=902
+[2020-03-28 07:18:20,865] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:20,867] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 07:18:20,981] {cli.py:545} INFO - Running <TaskInstance: latest_only.task1 2020-03-28T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:18:23,751] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:23,766] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 2 task instances ready to be queued
+[2020-03-28 07:18:23,767] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 07:18:23,768] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 07:18:23,785] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 04:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 04:00:00+00:00 [scheduled]>
+[2020-03-28 07:18:23,861] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 04:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 04:00:00+00:00 [queued]>
+[2020-03-28 07:18:23,870] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task4', datetime.datetime(2020, 3, 28, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 07:18:23,873] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task4', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:23,877] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task3', datetime.datetime(2020, 3, 28, 4, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 07:18:23,879] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task3', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:23,892] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task3', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:23,888] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task4', '2020-03-28T04:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 07:18:23,917] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task2 execution_date=2020-03-28 04:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:23,936] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.latest_only execution_date=2020-03-28 04:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:25,860] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=1026
+[2020-03-28 07:18:25,879] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=1027
+[2020-03-28 07:18:27,192] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:27,194] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 07:18:27,292] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 07:18:27,294] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 07:18:27,341] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task4 2020-03-28T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:18:27,454] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task3 2020-03-28T04:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 07:18:27,708] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.latest_only execution_date=2020-03-28 04:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:33,684] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task1 execution_date=2020-03-28 04:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:37,694] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.task1 execution_date=2020-03-28 04:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:41,677] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task4 execution_date=2020-03-28 04:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 07:18:41,683] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task3 execution_date=2020-03-28 04:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:56:32,640] {scheduler_job.py:224} WARNING - Killing PID 28272
+[2020-03-28 13:56:32,853] {scheduler_job.py:224} WARNING - Killing PID 28275
+[2020-03-28 13:56:33,024] {scheduler_job.py:224} WARNING - Killing PID 28275
+[2020-03-28 13:56:50,009] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.latest_only 2020-03-28 08:00:00+00:00 [scheduled]>
+[2020-03-28 13:56:50,095] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-03-28 13:56:50,102] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 13:56:50,326] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 08:00:00+00:00 [scheduled]>
+[2020-03-28 13:56:50,940] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 08:00:00+00:00 [queued]>
+[2020-03-28 13:56:51,221] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 28, 8, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 13:56:51,313] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 13:56:51,569] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 13:56:59,464] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 08:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 08:00:00+00:00 [scheduled]>
+[2020-03-28 13:56:59,484] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 2 task instances ready to be queued
+[2020-03-28 13:56:59,489] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 13:56:59,491] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 13:56:59,513] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 08:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 08:00:00+00:00 [scheduled]>
+[2020-03-28 13:56:59,576] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 08:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 08:00:00+00:00 [queued]>
+[2020-03-28 13:56:59,582] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 28, 8, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 13:56:59,589] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:56:59,592] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 28, 8, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-28 13:56:59,595] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:56:59,604] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:56:59,611] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T08:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:57:01,816] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28371
+[2020-03-28 13:57:01,944] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28438
+[2020-03-28 13:57:02,014] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28439
+[2020-03-28 13:57:05,553] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:05,557] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 13:57:05,628] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.latest_only 2020-03-28 12:00:00+00:00 [scheduled]>[2020-03-28 13:57:05,634] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:05,637] {__init__.py:51} INFO - Using executor LocalExecutor
+
+[2020-03-28 13:57:05,686] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 13:57:05,713] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 13:57:05,789] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-03-28 13:57:05,872] {scheduler_job.py:986} INFO - DAG latest_only has 1/16 running and queued tasks
+[2020-03-28 13:57:05,987] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:57:06,074] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28T08:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:57:06,215] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 12:00:00+00:00 [queued]>[2020-03-28 13:57:06,221] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-28T08:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+
+[2020-03-28 13:57:06,255] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 28, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 13:57:06,265] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 13:57:06,287] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 13:57:06,321] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-28T08:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:57:09,935] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28529
+[2020-03-28 13:57:15,613] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:15,773] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 13:57:17,231] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-28T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:57:18,264] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:57:18,405] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 124 open slots and 2 task instances ready to be queued
+[2020-03-28 13:57:18,426] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 2/16 running and queued tasks
+[2020-03-28 13:57:18,464] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 3/16 running and queued tasks
+[2020-03-28 13:57:18,552] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:57:18,828] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 12:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 12:00:00+00:00 [queued]>
+[2020-03-28 13:57:18,977] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 28, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 13:57:19,043] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:57:19,085] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 28, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-28 13:57:19,130] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:57:19,186] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:57:19,210] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:57:22,641] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28670
+[2020-03-28 13:57:22,786] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28669
+[2020-03-28 13:57:25,382] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:25,396] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 13:57:25,427] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:25,434] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 13:57:25,606] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-28T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:57:25,693] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:57:26,448] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.latest_only execution_date=2020-03-28 08:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:57:32,385] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task2 execution_date=2020-03-28 08:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:57:32,419] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.latest_only execution_date=2020-03-28 08:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:57:36,783] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.task1 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:57:36,870] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-03-28 13:57:36,888] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 13:57:36,934] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.task1 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:57:37,126] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.task1 2020-03-28 12:00:00+00:00 [queued]>
+[2020-03-28 13:57:37,166] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'task1', datetime.datetime(2020, 3, 28, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 13:57:37,176] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'task1', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 13:57:37,189] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'task1', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 13:57:37,380] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.latest_only execution_date=2020-03-28 12:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:57:40,388] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28933
+[2020-03-28 13:57:43,030] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:43,035] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 13:57:43,152] {cli.py:545} INFO - Running <TaskInstance: latest_only.task1 2020-03-28T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:57:44,877] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:57:44,924] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-03-28 13:57:44,926] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 13:57:44,946] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:57:45,035] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 12:00:00+00:00 [queued]>
+[2020-03-28 13:57:45,037] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task1', datetime.datetime(2020, 3, 28, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 13:57:45,039] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task1', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:57:45,045] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task2 execution_date=2020-03-28 12:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:57:45,047] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task1', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:57:45,058] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.latest_only execution_date=2020-03-28 12:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:57:47,078] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=29023
+[2020-03-28 13:57:48,699] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:57:48,704] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 13:57:49,117] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task1 2020-03-28T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:57:58,908] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.task1 execution_date=2020-03-28 12:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:58:04,910] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:58:04,931] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 2 task instances ready to be queued
+[2020-03-28 13:58:04,935] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 13:58:04,937] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 13:58:04,964] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 12:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 12:00:00+00:00 [scheduled]>
+[2020-03-28 13:58:05,078] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 12:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 12:00:00+00:00 [queued]>
+[2020-03-28 13:58:05,083] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task4', datetime.datetime(2020, 3, 28, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 13:58:05,085] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task4', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:58:05,087] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task3', datetime.datetime(2020, 3, 28, 12, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 13:58:05,090] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task3', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:58:05,099] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task4', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:58:05,110] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task3', '2020-03-28T12:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 13:58:05,116] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task1 execution_date=2020-03-28 12:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:58:07,578] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=29299
+[2020-03-28 13:58:07,604] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=29300
+[2020-03-28 13:58:12,013] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:58:12,016] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 13:58:12,126] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task4 2020-03-28T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:58:12,487] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 13:58:12,495] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 13:58:12,668] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task3 2020-03-28T12:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 13:58:36,042] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task4 execution_date=2020-03-28 12:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 13:58:36,053] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task3 execution_date=2020-03-28 12:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 16:23:08,064] {scheduler_job.py:224} WARNING - Killing PID 20045
+[2020-03-28 16:23:08,405] {scheduler_job.py:224} WARNING - Killing PID 20048
+[2020-03-28 16:23:09,112] {scheduler_job.py:224} WARNING - Killing PID 20045
+[2020-03-28 16:23:09,378] {scheduler_job.py:224} WARNING - Killing PID 20048
+[2020-03-28 16:23:18,607] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.latest_only 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:23:18,637] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-03-28 16:23:18,646] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 16:23:18,726] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:23:19,398] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 16:00:00+00:00 [queued]>
+[2020-03-28 16:23:19,450] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 28, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 16:23:19,465] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 16:23:19,480] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 16:23:22,524] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20119
+[2020-03-28 16:23:24,492] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:24,521] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 16:23:25,066] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-28T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 16:23:29,717] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 16:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:23:29,735] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 2 task instances ready to be queued
+[2020-03-28 16:23:29,737] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 16:23:29,739] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 16:23:29,758] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 16:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:23:29,920] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 16:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 16:00:00+00:00 [queued]>
+[2020-03-28 16:23:29,924] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 28, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 16:23:29,925] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:23:29,928] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 28, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-28 16:23:29,929] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:23:29,937] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:23:29,937] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:23:32,048] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20228
+[2020-03-28 16:23:32,066] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20227
+[2020-03-28 16:23:33,625] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:33,627] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 16:23:33,701] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:33,704] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 16:23:33,743] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 16:23:33,825] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-28T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 16:23:33,905] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.task1 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:23:33,916] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 1 task instances ready to be queued
+[2020-03-28 16:23:33,917] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 16:23:33,939] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.task1 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:23:34,427] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.task1 2020-03-28 16:00:00+00:00 [queued]>
+[2020-03-28 16:23:34,435] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'task1', datetime.datetime(2020, 3, 28, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 16:23:34,439] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'task1', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 16:23:34,450] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'task1', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 16:23:36,550] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20295
+[2020-03-28 16:23:38,260] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:38,270] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 16:23:38,464] {cli.py:545} INFO - Running <TaskInstance: latest_only.task1 2020-03-28T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 16:23:43,980] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.latest_only execution_date=2020-03-28 16:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 16:23:49,988] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:23:50,004] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-03-28 16:23:50,006] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 16:23:50,032] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:23:50,075] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 16:00:00+00:00 [queued]>
+[2020-03-28 16:23:50,076] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task1', datetime.datetime(2020, 3, 28, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 16:23:50,079] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task1', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:23:50,084] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task2 execution_date=2020-03-28 16:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 16:23:50,085] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task1', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:23:50,097] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.latest_only execution_date=2020-03-28 16:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 16:23:51,759] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20543
+[2020-03-28 16:23:53,208] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:23:53,212] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 16:23:53,353] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task1 2020-03-28T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 16:23:54,055] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.task1 execution_date=2020-03-28 16:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 16:24:08,020] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 16:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:24:08,033] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 2 task instances ready to be queued
+[2020-03-28 16:24:08,034] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 16:24:08,037] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 16:24:08,050] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 16:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 16:00:00+00:00 [scheduled]>
+[2020-03-28 16:24:08,103] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 16:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 16:00:00+00:00 [queued]>
+[2020-03-28 16:24:08,105] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task4', datetime.datetime(2020, 3, 28, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 16:24:08,106] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task4', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:24:08,108] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task3', datetime.datetime(2020, 3, 28, 16, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 16:24:08,110] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task3', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:24:08,114] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task4', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:24:08,115] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task3', '2020-03-28T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 16:24:08,117] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task1 execution_date=2020-03-28 16:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 16:24:09,660] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20790
+[2020-03-28 16:24:09,730] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20789
+[2020-03-28 16:24:11,036] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:24:11,039] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 16:24:11,137] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 16:24:11,139] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 16:24:11,143] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task3 2020-03-28T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 16:24:11,244] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task4 2020-03-28T16:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 16:24:28,041] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task3 execution_date=2020-03-28 16:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 16:24:28,047] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task4 execution_date=2020-03-28 16:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:37:57,163] {scheduler_job.py:224} WARNING - Killing PID 16409
+[2020-03-28 21:37:57,493] {scheduler_job.py:224} WARNING - Killing PID 16412
+[2020-03-28 21:37:58,368] {scheduler_job.py:224} WARNING - Killing PID 16412
+[2020-03-28 21:38:10,668] {scheduler_job.py:927} INFO - 3 tasks up for execution:
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:38:10,733] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 3 task instances ready to be queued
+[2020-03-28 21:38:10,757] {scheduler_job.py:986} INFO - DAG example_branch_operator has 0/16 running and queued tasks
+[2020-03-28 21:38:10,790] {scheduler_job.py:986} INFO - DAG example_short_circuit_operator has 0/16 running and queued tasks
+[2020-03-28 21:38:10,827] {scheduler_job.py:986} INFO - DAG example_short_circuit_operator has 1/16 running and queued tasks
+[2020-03-28 21:38:10,990] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:38:11,738] {scheduler_job.py:1112} INFO - Setting the following 3 tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: example_branch_operator.run_this_first 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:38:11,914] {scheduler_job.py:1148} INFO - Sending ('example_short_circuit_operator', 'condition_is_False', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:38:11,916] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_False', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-28 21:38:11,923] {scheduler_job.py:1148} INFO - Sending ('example_short_circuit_operator', 'condition_is_True', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:38:11,925] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_True', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-28 21:38:11,928] {scheduler_job.py:1148} INFO - Sending ('example_branch_operator', 'run_this_first', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 11 and queue default
+[2020-03-28 21:38:11,933] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_branch_operator', 'run_this_first', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:38:11,971] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_branch_operator', 'run_this_first', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:38:11,999] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_True', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-28 21:38:11,989] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_short_circuit_operator', 'condition_is_False', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-28 21:38:17,019] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16485
+[2020-03-28 21:38:17,029] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16486
+[2020-03-28 21:38:17,239] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16488
+[2020-03-28 21:38:17,763] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.latest_only 2020-03-28 20:00:00+00:00 [scheduled]>
+[2020-03-28 21:38:17,974] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-03-28 21:38:18,008] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 21:38:18,322] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 20:00:00+00:00 [scheduled]>
+[2020-03-28 21:38:19,326] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.latest_only 2020-03-28 20:00:00+00:00 [queued]>
+[2020-03-28 21:38:19,614] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'latest_only', datetime.datetime(2020, 3, 28, 20, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 21:38:19,642] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 21:38:19,983] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'latest_only', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 21:38:21,976] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:21,996] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py
+[2020-03-28 21:38:22,370] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:22,399] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:22,401] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2020-03-28 21:38:22,421] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2020-03-28 21:38:22,518] {cli.py:545} INFO - Running <TaskInstance: example_branch_operator.run_this_first 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:22,859] {cli.py:545} INFO - Running <TaskInstance: example_short_circuit_operator.condition_is_False 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:22,870] {cli.py:545} INFO - Running <TaskInstance: example_short_circuit_operator.condition_is_True 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:22,904] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16530
+[2020-03-28 21:38:27,039] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:27,176] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 21:38:29,338] {cli.py:545} INFO - Running <TaskInstance: latest_only.latest_only 2020-03-28T20:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:34,757] {scheduler_job.py:927} INFO - 5 tasks up for execution:
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:38:35,005] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 5 task instances ready to be queued
+[2020-03-28 21:38:35,007] {scheduler_job.py:986} INFO - DAG example_http_operator has 0/16 running and queued tasks
+[2020-03-28 21:38:35,011] {scheduler_job.py:986} INFO - DAG example_skip_dag has 0/16 running and queued tasks
+[2020-03-28 21:38:35,013] {scheduler_job.py:986} INFO - DAG example_skip_dag has 1/16 running and queued tasks
+[2020-03-28 21:38:35,016] {scheduler_job.py:986} INFO - DAG example_skip_dag has 2/16 running and queued tasks
+[2020-03-28 21:38:35,021] {scheduler_job.py:986} INFO - DAG example_skip_dag has 3/16 running and queued tasks
+[2020-03-28 21:38:35,044] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:38:35,245] {scheduler_job.py:1112} INFO - Setting the following 5 tasks to queued state:
+        <TaskInstance: example_http_operator.http_sensor_check 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.always_true_1 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.always_true_2 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.skip_operator_1 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.skip_operator_2 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:38:35,255] {scheduler_job.py:1148} INFO - Sending ('example_http_operator', 'http_sensor_check', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 6 and queue default
+[2020-03-28 21:38:35,262] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_http_operator', 'http_sensor_check', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py']
+[2020-03-28 21:38:35,265] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'always_true_1', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:38:35,267] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'always_true_1', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:38:35,272] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'always_true_2', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:38:35,276] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'always_true_2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:38:35,279] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'skip_operator_1', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:38:35,282] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'skip_operator_1', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:38:35,285] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'skip_operator_2', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:38:35,288] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'skip_operator_2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:38:35,304] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'always_true_1', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:38:35,308] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_http_operator', 'http_sensor_check', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py']
+[2020-03-28 21:38:35,313] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'always_true_2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:38:35,317] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'skip_operator_1', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:38:35,339] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'skip_operator_2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:38:41,269] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16682
+[2020-03-28 21:38:41,284] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16681
+[2020-03-28 21:38:41,583] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16683
+[2020-03-28 21:38:41,737] {scheduler_job.py:927} INFO - 3 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 20:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 20:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.print_date 2020-03-28 00:00:00+00:00 [scheduled]>[2020-03-28 21:38:41,800] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16684
+[2020-03-28 21:38:42,022] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16685
+
+[2020-03-28 21:38:43,013] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 122 open slots and 3 task instances ready to be queued
+[2020-03-28 21:38:43,135] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 21:38:43,210] {scheduler_job.py:986} INFO - DAG tutorial has 0/16 running and queued tasks
+[2020-03-28 21:38:43,320] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 21:38:44,218] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 20:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.print_date 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 20:00:00+00:00 [scheduled]>
+[2020-03-28 21:38:45,186] {scheduler_job.py:1112} INFO - Setting the following 3 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28 20:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task2 2020-03-28 20:00:00+00:00 [queued]>
+        <TaskInstance: tutorial.print_date 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:38:45,652] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'latest_only', datetime.datetime(2020, 3, 28, 20, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 4 and queue default
+[2020-03-28 21:38:45,774] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:38:45,901] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task2', datetime.datetime(2020, 3, 28, 20, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:38:45,976] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:38:46,001] {scheduler_job.py:1148} INFO - Sending ('tutorial', 'print_date', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:38:46,058] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'tutorial', 'print_date', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-28 21:38:46,165] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'latest_only', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:38:46,207] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task2', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:38:46,231] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'tutorial', 'print_date', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-28 21:38:46,814] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:46,882] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py
+[2020-03-28 21:38:46,977] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:47,135] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-28 21:38:47,261] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:47,401] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-28 21:38:47,623] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:47,655] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:47,706] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-28 21:38:47,739] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-28 21:38:48,511] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_short_circuit_operator.true_1 2020-03-28 00:00:00+00:00 [scheduled]>[2020-03-28 21:38:48,624] {cli.py:545} INFO - Running <TaskInstance: example_http_operator.http_sensor_check 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+
+[2020-03-28 21:38:48,737] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.always_true_1 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:48,841] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 120 open slots and 1 task instances ready to be queued
+[2020-03-28 21:38:48,940] {scheduler_job.py:986} INFO - DAG example_short_circuit_operator has 0/16 running and queued tasks
+[2020-03-28 21:38:48,952] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.always_true_2 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:49,406] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.true_1 2020-03-28 00:00:00+00:00 [scheduled]>[2020-03-28 21:38:49,439] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.skip_operator_1 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+
+[2020-03-28 21:38:49,740] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.skip_operator_2 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:49,876] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16759
+[2020-03-28 21:38:50,090] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16761
+[2020-03-28 21:38:50,099] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.true_1 2020-03-28 00:00:00+00:00 [queued]>[2020-03-28 21:38:50,117] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16763
+
+[2020-03-28 21:38:50,377] {scheduler_job.py:1148} INFO - Sending ('example_short_circuit_operator', 'true_1', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 21:38:50,504] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_short_circuit_operator', 'true_1', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-28 21:38:50,710] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_short_circuit_operator', 'true_1', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-28 21:38:50,866] {scheduler_job.py:1288} INFO - Executor reports execution of example_short_circuit_operator.condition_is_True execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:38:51,163] {scheduler_job.py:1288} INFO - Executor reports execution of example_short_circuit_operator.condition_is_False execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:38:54,253] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:54,273] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:54,291] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 21:38:54,483] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 21:38:55,121] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:38:55,296] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py
+[2020-03-28 21:38:55,627] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16808
+[2020-03-28 21:38:57,280] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task2 2020-03-28T20:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:57,308] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_branch_operator.branching 2020-03-28 00:00:00+00:00 [scheduled]>[2020-03-28 21:38:57,545] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.latest_only 2020-03-28T20:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+
+[2020-03-28 21:38:57,926] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 119 open slots and 1 task instances ready to be queued
+[2020-03-28 21:38:57,977] {cli.py:545} INFO - Running <TaskInstance: tutorial.print_date 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:38:58,017] {scheduler_job.py:986} INFO - DAG example_branch_operator has 0/16 running and queued tasks
+[2020-03-28 21:38:58,723] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_branch_operator.branching 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:00,149] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_branch_operator.branching 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:39:00,424] {scheduler_job.py:1148} INFO - Sending ('example_branch_operator', 'branching', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 10 and queue default
+[2020-03-28 21:39:00,519] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_branch_operator', 'branching', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:39:00,739] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_branch_operator', 'branching', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:39:00,781] {scheduler_job.py:1288} INFO - Executor reports execution of example_branch_operator.run_this_first execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:01,915] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:02,092] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2020-03-28 21:39:04,080] {cli.py:545} INFO - Running <TaskInstance: example_short_circuit_operator.true_1 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:39:04,380] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: latest_only.task1 2020-03-28 20:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:04,530] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 118 open slots and 1 task instances ready to be queued
+[2020-03-28 21:39:04,561] {scheduler_job.py:986} INFO - DAG latest_only has 0/16 running and queued tasks
+[2020-03-28 21:39:05,109] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only.task1 2020-03-28 20:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:05,554] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16937
+[2020-03-28 21:39:05,916] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: latest_only.task1 2020-03-28 20:00:00+00:00 [queued]>
+[2020-03-28 21:39:06,074] {scheduler_job.py:1148} INFO - Sending ('latest_only', 'task1', datetime.datetime(2020, 3, 28, 20, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 21:39:06,207] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only', 'task1', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 21:39:06,434] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only', 'task1', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py']
+[2020-03-28 21:39:06,443] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.latest_only execution_date=2020-03-28 20:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:10,817] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:11,005] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py
+[2020-03-28 21:39:12,485] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17033
+[2020-03-28 21:39:14,067] {cli.py:545} INFO - Running <TaskInstance: example_branch_operator.branching 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:39:16,730] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:16,773] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+[2020-03-28 21:39:18,146] {cli.py:545} INFO - Running <TaskInstance: latest_only.task1 2020-03-28T20:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:39:22,214] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: example_http_operator.post_op 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.one_success 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:22,394] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 2 task instances ready to be queued
+[2020-03-28 21:39:22,400] {scheduler_job.py:986} INFO - DAG example_http_operator has 0/16 running and queued tasks
+[2020-03-28 21:39:22,409] {scheduler_job.py:986} INFO - DAG example_skip_dag has 0/16 running and queued tasks
+[2020-03-28 21:39:22,540] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_http_operator.post_op 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: example_skip_dag.one_success 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:23,083] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: example_http_operator.post_op 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: example_skip_dag.one_success 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:39:23,319] {scheduler_job.py:1148} INFO - Sending ('example_http_operator', 'post_op', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 5 and queue default
+[2020-03-28 21:39:23,378] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_http_operator', 'post_op', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py']
+[2020-03-28 21:39:23,416] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'one_success', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 21:39:23,431] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'one_success', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:39:23,529] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_http_operator', 'post_op', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py']
+[2020-03-28 21:39:23,548] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'one_success', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:39:23,602] {scheduler_job.py:1288} INFO - Executor reports execution of example_skip_dag.always_true_1 execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:23,809] {scheduler_job.py:1288} INFO - Executor reports execution of example_http_operator.http_sensor_check execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:23,960] {scheduler_job.py:1288} INFO - Executor reports execution of example_skip_dag.always_true_2 execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:24,120] {scheduler_job.py:1288} INFO - Executor reports execution of example_skip_dag.skip_operator_1 execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:24,226] {scheduler_job.py:1288} INFO - Executor reports execution of example_skip_dag.skip_operator_2 execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:26,353] {scheduler_job.py:927} INFO - 3 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 20:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.templated 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.sleep 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:26,663] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 124 open slots and 3 task instances ready to be queued
+[2020-03-28 21:39:26,687] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 21:39:26,703] {scheduler_job.py:986} INFO - DAG tutorial has 0/16 running and queued tasks
+[2020-03-28 21:39:26,713] {scheduler_job.py:986} INFO - DAG tutorial has 1/16 running and queued tasks
+[2020-03-28 21:39:26,859] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 20:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.templated 2020-03-28 00:00:00+00:00 [scheduled]>
+        <TaskInstance: tutorial.sleep 2020-03-28 00:00:00+00:00 [scheduled]>[2020-03-28 21:39:26,887] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17244
+
+[2020-03-28 21:39:26,983] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17246
+[2020-03-28 21:39:27,249] {scheduler_job.py:1112} INFO - Setting the following 3 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task1 2020-03-28 20:00:00+00:00 [queued]>
+        <TaskInstance: tutorial.sleep 2020-03-28 00:00:00+00:00 [queued]>
+        <TaskInstance: tutorial.templated 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:39:27,425] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task1', datetime.datetime(2020, 3, 28, 20, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:39:27,448] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task1', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:39:27,497] {scheduler_job.py:1148} INFO - Sending ('tutorial', 'sleep', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 21:39:27,562] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'tutorial', 'sleep', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-28 21:39:27,597] {scheduler_job.py:1148} INFO - Sending ('tutorial', 'templated', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 21:39:27,628] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'tutorial', 'templated', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-28 21:39:27,737] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task1', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:39:27,766] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'tutorial', 'sleep', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-28 21:39:27,808] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'tutorial', 'templated', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py']
+[2020-03-28 21:39:27,995] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task2 execution_date=2020-03-28 20:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:28,491] {scheduler_job.py:1288} INFO - Executor reports execution of tutorial.print_date execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:28,769] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.latest_only execution_date=2020-03-28 20:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:30,671] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_short_circuit_operator.true_2 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:30,815] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 123 open slots and 1 task instances ready to be queued
+[2020-03-28 21:39:30,827] {scheduler_job.py:986} INFO - DAG example_short_circuit_operator has 0/16 running and queued tasks
+[2020-03-28 21:39:31,134] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.true_2 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:31,254] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:31,378] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:31,455] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-28 21:39:31,637] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py
+[2020-03-28 21:39:31,644] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_short_circuit_operator.true_2 2020-03-28 00:00:00+00:00 [queued]>[2020-03-28 21:39:32,021] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17290
+[2020-03-28 21:39:32,091] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17292
+[2020-03-28 21:39:32,116] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17286
+
+[2020-03-28 21:39:32,337] {scheduler_job.py:1148} INFO - Sending ('example_short_circuit_operator', 'true_2', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 21:39:32,418] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_short_circuit_operator', 'true_2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-28 21:39:32,550] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_short_circuit_operator', 'true_2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py']
+[2020-03-28 21:39:32,710] {scheduler_job.py:1288} INFO - Executor reports execution of example_short_circuit_operator.true_1 execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:33,489] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.one_success 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:39:33,946] {cli.py:545} INFO - Running <TaskInstance: example_http_operator.post_op 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:39:35,699] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:35,734] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py
+[2020-03-28 21:39:35,865] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:35,985] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 21:39:36,001] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:36,091] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/tutorial.py
+[2020-03-28 21:39:36,353] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17331
+[2020-03-28 21:39:36,954] {cli.py:545} INFO - Running <TaskInstance: tutorial.templated 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:39:37,454] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task1 2020-03-28T20:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:39:37,567] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_branch_operator.branch_a 2020-03-28 00:00:00+00:00 [scheduled]>[2020-03-28 21:39:37,592] {cli.py:545} INFO - Running <TaskInstance: tutorial.sleep 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+
+[2020-03-28 21:39:38,034] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 122 open slots and 1 task instances ready to be queued
+[2020-03-28 21:39:38,152] {scheduler_job.py:986} INFO - DAG example_branch_operator has 0/16 running and queued tasks
+[2020-03-28 21:39:38,664] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_branch_operator.branch_a 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:39:39,075] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_branch_operator.branch_a 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:39:39,254] {scheduler_job.py:1148} INFO - Sending ('example_branch_operator', 'branch_a', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 3 and queue default
+[2020-03-28 21:39:39,291] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_branch_operator', 'branch_a', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:39:39,430] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_branch_operator', 'branch_a', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:39:39,503] {scheduler_job.py:1288} INFO - Executor reports execution of example_branch_operator.branching execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:40,631] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:40,690] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py
+[2020-03-28 21:39:42,064] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only.task1 execution_date=2020-03-28 20:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:39:42,365] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17418
+[2020-03-28 21:39:42,421] {cli.py:545} INFO - Running <TaskInstance: example_short_circuit_operator.true_2 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:39:48,298] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:39:48,353] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py
+[2020-03-28 21:39:49,085] {cli.py:545} INFO - Running <TaskInstance: example_branch_operator.branch_a 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:40:02,666] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_skip_dag.final_2 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:40:02,773] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 1 task instances ready to be queued
+[2020-03-28 21:40:02,826] {scheduler_job.py:986} INFO - DAG example_skip_dag has 0/16 running and queued tasks
+[2020-03-28 21:40:03,115] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_skip_dag.final_2 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:40:03,417] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_skip_dag.final_2 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:40:03,435] {scheduler_job.py:1148} INFO - Sending ('example_skip_dag', 'final_2', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 21:40:03,441] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_skip_dag', 'final_2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:40:03,461] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_skip_dag', 'final_2', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py']
+[2020-03-28 21:40:03,517] {scheduler_job.py:1288} INFO - Executor reports execution of example_skip_dag.one_success execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:03,565] {scheduler_job.py:1288} INFO - Executor reports execution of example_http_operator.post_op execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:04,951] {scheduler_job.py:927} INFO - 2 tasks up for execution:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 20:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 20:00:00+00:00 [scheduled]>
+[2020-03-28 21:40:05,035] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 2 task instances ready to be queued
+[2020-03-28 21:40:05,041] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 0/16 running and queued tasks
+[2020-03-28 21:40:05,050] {scheduler_job.py:986} INFO - DAG latest_only_with_trigger has 1/16 running and queued tasks
+[2020-03-28 21:40:05,251] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 20:00:00+00:00 [scheduled]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 20:00:00+00:00 [scheduled]>
+[2020-03-28 21:40:05,462] {scheduler_job.py:1112} INFO - Setting the following 2 tasks to queued state:
+        <TaskInstance: latest_only_with_trigger.task4 2020-03-28 20:00:00+00:00 [queued]>
+        <TaskInstance: latest_only_with_trigger.task3 2020-03-28 20:00:00+00:00 [queued]>
+[2020-03-28 21:40:05,464] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task4', datetime.datetime(2020, 3, 28, 20, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 21:40:05,466] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task4', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:40:05,467] {scheduler_job.py:1148} INFO - Sending ('latest_only_with_trigger', 'task3', datetime.datetime(2020, 3, 28, 20, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 21:40:05,469] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'latest_only_with_trigger', 'task3', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:40:05,472] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task4', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:40:05,475] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'latest_only_with_trigger', 'task3', '2020-03-28T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py']
+[2020-03-28 21:40:05,481] {scheduler_job.py:1288} INFO - Executor reports execution of tutorial.templated execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:05,502] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task1 execution_date=2020-03-28 20:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:05,521] {scheduler_job.py:1288} INFO - Executor reports execution of tutorial.sleep execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:05,904] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17681
+[2020-03-28 21:40:07,068] {scheduler_job.py:1288} INFO - Executor reports execution of example_short_circuit_operator.true_2 execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:08,343] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17698
+[2020-03-28 21:40:08,347] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17697
+[2020-03-28 21:40:08,625] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:40:08,641] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+[2020-03-28 21:40:09,163] {cli.py:545} INFO - Running <TaskInstance: example_skip_dag.final_2 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:40:10,303] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:40:10,307] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 21:40:10,335] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:40:10,338] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2020-03-28 21:40:10,505] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task3 2020-03-28T20:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:40:10,528] {cli.py:545} INFO - Running <TaskInstance: latest_only_with_trigger.task4 2020-03-28T20:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:40:10,903] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_branch_operator.follow_branch_a 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:40:11,086] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-03-28 21:40:11,132] {scheduler_job.py:986} INFO - DAG example_branch_operator has 0/16 running and queued tasks
+[2020-03-28 21:40:11,317] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_branch_operator.follow_branch_a 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:40:11,453] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_branch_operator.follow_branch_a 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:40:11,494] {scheduler_job.py:1148} INFO - Sending ('example_branch_operator', 'follow_branch_a', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 2 and queue default
+[2020-03-28 21:40:11,507] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_branch_operator', 'follow_branch_a', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:40:11,526] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_branch_operator', 'follow_branch_a', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:40:11,528] {scheduler_job.py:1288} INFO - Executor reports execution of example_branch_operator.branch_a execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:14,939] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17791
+[2020-03-28 21:40:17,721] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:40:17,738] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py
+[2020-03-28 21:40:18,200] {cli.py:545} INFO - Running <TaskInstance: example_branch_operator.follow_branch_a 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:40:21,044] {scheduler_job.py:1288} INFO - Executor reports execution of example_skip_dag.final_2 execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:35,003] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task3 execution_date=2020-03-28 20:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:35,017] {scheduler_job.py:1288} INFO - Executor reports execution of latest_only_with_trigger.task4 execution_date=2020-03-28 20:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:36,991] {scheduler_job.py:927} INFO - 1 tasks up for execution:
+        <TaskInstance: example_branch_operator.join 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:40:37,012] {scheduler_job.py:958} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-03-28 21:40:37,019] {scheduler_job.py:986} INFO - DAG example_branch_operator has 0/16 running and queued tasks
+[2020-03-28 21:40:37,034] {scheduler_job.py:1036} INFO - Setting the following tasks to queued state:
+        <TaskInstance: example_branch_operator.join 2020-03-28 00:00:00+00:00 [scheduled]>
+[2020-03-28 21:40:37,136] {scheduler_job.py:1112} INFO - Setting the following 1 tasks to queued state:
+        <TaskInstance: example_branch_operator.join 2020-03-28 00:00:00+00:00 [queued]>
+[2020-03-28 21:40:37,137] {scheduler_job.py:1148} INFO - Sending ('example_branch_operator', 'join', datetime.datetime(2020, 3, 28, 0, 0, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1) to executor with priority 1 and queue default
+[2020-03-28 21:40:37,139] {base_executor.py:59} INFO - Adding to queue: ['airflow', 'run', 'example_branch_operator', 'join', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:40:37,144] {scheduler_job.py:1288} INFO - Executor reports execution of example_branch_operator.follow_branch_a execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+[2020-03-28 21:40:37,144] {local_executor.py:84} INFO - QueuedLocalWorker running ['airflow', 'run', 'example_branch_operator', 'join', '2020-03-28T00:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py']
+[2020-03-28 21:40:39,321] {settings.py:252} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=18102
+[2020-03-28 21:40:41,056] {__init__.py:51} INFO - Using executor LocalExecutor
+[2020-03-28 21:40:41,060] {dagbag.py:92} INFO - Filling up the DagBag from /home/jdearce/.local/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py
+[2020-03-28 21:40:41,214] {cli.py:545} INFO - Running <TaskInstance: example_branch_operator.join 2020-03-28T00:00:00+00:00 [queued]> on host LAPTOP-I43LI54D.localdomain
+[2020-03-28 21:40:57,053] {scheduler_job.py:1288} INFO - Executor reports execution of example_branch_operator.join execution_date=2020-03-28 00:00:00+00:00 exited with status success for try_number 1
+^C[2020-03-28 21:44:16,344] {helpers.py:308} INFO - Sending Signals.SIGTERM to GPID 270
+[2020-03-28 21:44:16,442] {helpers.py:286} INFO - Process psutil.Process(pid=270, status='terminated') (270) terminated with exit code 0
+[2020-03-28 21:44:16,456] {helpers.py:286} INFO - Process psutil.Process(pid=20584, status='terminated') (20584) terminated with exit code None
+[2020-03-28 21:44:16,459] {helpers.py:286} INFO - Process psutil.Process(pid=20581, status='terminated') (20581) terminated with exit code None
+[2020-03-28 21:44:16,461] {scheduler_job.py:1361} INFO - Exited execute loop
+jdearce@LAPTOP-I43LI54D:~$
